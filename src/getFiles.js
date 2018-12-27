@@ -8,13 +8,21 @@ const search = (base) => { // base should be a string
     const currentDir = path.join(this.root, item)
     const state = fs.statSync(currentDir)
     if(state.isDirectory(currentDir)){
-      item[0] == '.' ? '' : getFiles(currentDir).map(func, {root: currentDir})
+      switch(true) {
+        case item[0] == '.':
+          break;
+        case item == 'node_modules':
+          break;
+        default:
+          getFiles(currentDir).map(func, {root: currentDir})
+      }
     }
     else {
       arr.push(currentDir)
     }
   }
   getFiles(base).map(func, {root: base})
+  console.log(arr)
   return arr
 }
 
