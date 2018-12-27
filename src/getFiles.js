@@ -8,15 +8,14 @@ const search = (base) => { // base should be a string
     const currentDir = path.join(this.root, item)
     const state = fs.statSync(currentDir)
     if(state.isDirectory(currentDir)){
-      getFiles(currentDir).map(func, {root: currentDir})
+      item[0] == '.' ? '' : getFiles(currentDir).map(func, {root: currentDir})
     }
     else {
-      arr.push(item)
+      arr.push(currentDir)
     }
   }
   getFiles(base).map(func, {root: base})
   return arr
 }
 
-const a = search(path.join(__dirname, '..'))
-console.log(a)
+module.exports = search
