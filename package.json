@@ -11,6 +11,7 @@
   "devDependencies": {
     "@babel/cli": "^7.2.3",
     "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.5",
     "webpack": "^4.28.3",
@@ -21,5 +22,11 @@
     "dev": "webpack-dev-server --mode development",
     "build": "webpack --mode production",
     "reinstall": "rd /s /q node_modules && yarn install --production=false"
+  },
+  "babel": {
+    "presets": [
+      ["@babel/preset-env", {}],
+      "@babel/preset-react"
+    ]
   }
 }
