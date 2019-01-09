@@ -1,3 +1,4 @@
+//const search = require('./src/getFiles.js')
 
 
-console.log("search(__dirname)123")
+console.log('search(__dirname) ')

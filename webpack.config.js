@@ -7,13 +7,15 @@ module.exports = {
     filename: 'bundle.js'
   },
   module: {
-    loaders: [{
+    rules: [{
       test: /\.js?$/,
       exclude: /node_modules/,
-      loader: 'babel-loader',
-      // Options to configure the babel. here we have set up the preset. this can be replaced with .babelrc file
-      query: {
-        presets: ["@babel/preset-react"]
+      use: {
+        loader: 'babel-loader',
+        // Options to configure the babel. here we have set up the preset. this can be replaced with .babelrc file
+        options: {
+          presets: ["@babel/preset-env", "@babel/preset-react"]
+        }
       }
     }]
   }

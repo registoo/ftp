@@ -20,7 +20,8 @@
   },
   "scripts": {
     "dev": "webpack-dev-server --mode development",
-    "build": "webpack --mode production",
+    "build": "webpack --config webpack.config.js",
+    "production": "webpack --mode production",
     "reinstall": "rd /s /q node_modules && yarn install --production=false"
   },
   "babel": {
