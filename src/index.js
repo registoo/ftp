@@ -1,4 +1,4 @@
-//const search = require('./src/getFiles.js')
+const search = require('./getFiles.js')
 
 
-console.log('search(__dirname) ')
+console.log(search(__dirname))
