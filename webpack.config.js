@@ -1,4 +1,5 @@
 const path = require('path');
+const NODE_ENV = process.env.NODE_ENV || 'development';
 
 module.exports = {
   entry: './src/testReact.js',
@@ -9,8 +10,8 @@ module.exports = {
   node: {
    fs: "empty"
   },
-  devtool: 'cheap-source-map',
-  watch: true,
+  devtool: NODE_ENV === 'development' ? 'source-map' : false,
+  watch: NODE_ENV === 'development',
   watchOptions: {
     aggregateTimeout: 200,
     ignored: /node_modules/,

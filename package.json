@@ -19,7 +19,7 @@
     "webpack-dev-server": "^3.1.14"
   },
   "scripts": {
-    "dev": "webpack-dev-server --mode development",
+    "dev": "webpack --mode development && NODE_ENV='development'",
     "build": "webpack --config webpack.config.js",
     "production": "webpack --mode production",
     "reinstall": "rd /s /q node_modules && yarn install --production=false"
