@@ -1,13 +1,20 @@
 const path = require('path');
 
 module.exports = {
-  entry: './src/index.js',
+  entry: './src/testReact.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js'
   },
   node: {
    fs: "empty"
+  },
+  devtool: 'cheap-source-map',
+  watch: true,
+  watchOptions: {
+    aggregateTimeout: 200,
+    ignored: /node_modules/,
+    poll: 1000
   },
   module: {
     rules: [{
