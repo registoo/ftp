@@ -1,0 +1,17 @@
+{
+  "files": [
+    ".gitignore",
+    "dist\\bundle.js",
+    "dist\\files.json",
+    "dist\\index.html",
+    "package.json",
+    "README.md",
+    "server.js",
+    "src\\index.html",
+    "src\\serverSide\\getFiles.js",
+    "src\\serverSide\\index.js",
+    "src\\testReact.js",
+    "webpack.config.js",
+    "yarn.lock"
+  ]
+}
