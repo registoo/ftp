@@ -3,11 +3,15 @@ const React = require("react");
 const { render } = require("react-dom");
 
 function HelloWorld(props) {
-  return (
-    <div>
-      <h1>props.files[0]</h1>
-    </div>
-  );
+  const ul = props.files.map(elem => {
+    return (
+      <li>
+        <a href="#">{elem}</a>
+      </li>
+    );
+  });
+
+  return <ul>{ul}</ul>;
 }
 
 render(<HelloWorld files={files} />, document.getElementById("root"));

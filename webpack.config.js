@@ -4,7 +4,7 @@ module.exports = (env, options) => {
   const NODE_ENV = options.mode;
   return {
     entry: {
-      testReact: "./src/test.js"
+      test: "./src/test.js"
     },
     output: {
       path: path.resolve(__dirname, "dist"),
@@ -15,7 +15,7 @@ module.exports = (env, options) => {
     node: {
       fs: "empty"
     },
-    devtool: NODE_ENV === "development" ? "source-map" : false,
+    devtool: NODE_ENV === "development" ? false : false, //"source-map" : false,
     watch: NODE_ENV === "development",
     watchOptions: {
       aggregateTimeout: 200,

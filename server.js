@@ -1,6 +1,5 @@
 const express = require("express");
 const app = express();
-const search = require("./src/getFiles.js");
 const path = require("path");
 
 app.use(express.static(path.join(__dirname, "dist")));
