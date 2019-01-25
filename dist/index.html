@@ -6,6 +6,16 @@
   </head>
   <body>
     <div id="root">hello</div>
-    <script type="text/javascript" src="test.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+      var socket = io("http://localhost:3000");
+      socket.on("news", function(data) {
+        console.log(data);
+        socket.emit("my other event", { my: "data" });
+      });
+      socket.on("qwe", data => alert(data.hello));
+    </script>
+    <video controls><source src="small.mp4" type="video/mp4" /></video>
+    <video controls><source src="small.ogv" type="video/ogg" /></video>
   </body>
 </html>
