@@ -1,9 +1,11 @@
-const express = require("express");
-const app = express();
-const path = require("path");
+var express = require("express");
+var app = express();
+var server = require("http").Server(app);
+const port = 3000;
 
-app.use(express.static(path.join(__dirname, "dist")));
-
-app.listen(3000, function() {
-  console.log("Example app listening on port 3000!");
+server.listen(port, function() {
+  console.log("app listening on *:" + port);
+  console.log("socket server will be on *:" + port);
 });
+
+app.use(express.static("dist"));
