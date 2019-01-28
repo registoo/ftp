@@ -4,7 +4,7 @@ module.exports = (env, options) => {
   const NODE_ENV = options.mode;
   return {
     entry: {
-      testReact: "./src/test.js"
+      testR: "./src/test.js"
     },
     output: {
       path: path.resolve(__dirname, "dist"),
