@@ -1,7 +1,6 @@
 const countFiles = require("./serverSide/index.js");
+const path = require("path");
 
-const f = (searchDir, targetDir) => {
-  countFiles(searchDir, targetDir);
-};
-
-module.exports = f;
+const searchDir = path.join(__dirname, "../dist");
+const targetDir = "src/files.json";
+countFiles(searchDir, targetDir);
