@@ -1,12 +1,19 @@
 const fs = require("fs");
 const getFiles = require("./getFiles");
-const path = require("path");
 
-const filesObj = {
-  files: getFiles(path.join(__dirname, "../.."))
+const files = base => {
+  return {
+    files: getFiles(base)
+  };
 };
+
 const callback = err => {
   if (err) throw err;
 };
 
-fs.writeFile("dist/files.json", JSON.stringify(filesObj, "", 2), callback);
+function f(base, targetDir) {
+  const filesObj = files(base);
+  fs.writeFile(targetDir, JSON.stringify(filesObj, false, 2), callback);
+}
+
+module.exports = f;
