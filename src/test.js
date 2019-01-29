@@ -7,19 +7,10 @@ class FTPfiles extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      cross: true
+      value: "+"
     };
   }
-  handleClick() {
-    alert(this.state.cross);
-  }
-  render() {
-    return <HelloWorld files={files} onClick={() => this.handleClick()} />;
-  }
-}
-
-function HelloWorld(props) {
-  function liFTP(arr) {
+  liFTP(arr) {
     const a = arr.map((elem, i) => {
       i++;
       return (
@@ -30,13 +21,29 @@ function HelloWorld(props) {
     });
     return a;
   }
-  const f = liFTP(props.files);
-  return (
-    <div>
-      <button onClick={props.onClick}>+</button>
-      <ul>{f}</ul>;
-    </div>
-  );
+  handlerButtonValue() {
+    switch (this.state.value) {
+      case "+":
+        this.setState({ value: "-" });
+        break;
+      case "-":
+        this.setState({ value: "+" });
+        break;
+    }
+  }
+  render() {
+    return (
+      <div>
+        <button
+          onClick={() => this.handlerButtonValue()}
+          className="buttonFiles"
+        >
+          {this.state.value}
+        </button>
+        <ul>{this.liFTP(files)}</ul>;
+      </div>
+    );
+  }
 }
 
 render(<FTPfiles />, document.getElementById("root"));

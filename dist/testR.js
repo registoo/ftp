@@ -24075,51 +24075,57 @@ function (_React$Component) {
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(FTPfiles).call(this, props));
     _this.state = {
-      cross: true
+      value: "+"
     };
     return _this;
   }
 
   _createClass(FTPfiles, [{
-    key: "handleClick",
-    value: function handleClick() {
-      alert(this.state.cross);
+    key: "liFTP",
+    value: function liFTP(arr) {
+      var a = arr.map(function (elem, i) {
+        i++;
+        return React.createElement("li", {
+          key: i
+        }, React.createElement("a", {
+          href: elem
+        }, elem));
+      });
+      return a;
+    }
+  }, {
+    key: "handlerButtonValue",
+    value: function handlerButtonValue() {
+      switch (this.state.value) {
+        case "+":
+          this.setState({
+            value: "-"
+          });
+          break;
+
+        case "-":
+          this.setState({
+            value: "+"
+          });
+          break;
+      }
     }
   }, {
     key: "render",
     value: function render() {
       var _this2 = this;
 
-      return React.createElement(HelloWorld, {
-        files: files,
+      return React.createElement("div", null, React.createElement("button", {
         onClick: function onClick() {
-          return _this2.handleClick();
-        }
-      });
+          return _this2.handlerButtonValue();
+        },
+        className: "buttonFiles"
+      }, this.state.value), React.createElement("ul", null, this.liFTP(files)), ";");
     }
   }]);
 
   return FTPfiles;
 }(React.Component);
-
-function HelloWorld(props) {
-  function liFTP(arr) {
-    var a = arr.map(function (elem, i) {
-      i++;
-      return React.createElement("li", {
-        key: i
-      }, React.createElement("a", {
-        href: elem
-      }, elem));
-    });
-    return a;
-  }
-
-  var f = liFTP(props.files);
-  return React.createElement("div", null, React.createElement("button", {
-    onClick: props.onClick
-  }, "+"), React.createElement("ul", null, f), ";");
-}
 
 render(React.createElement(FTPfiles, null), document.getElementById("root"));
 
