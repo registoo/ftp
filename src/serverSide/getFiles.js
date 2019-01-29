@@ -3,10 +3,14 @@ const path = require("path");
 
 const search = base => {
   // base should be a string
-  const arr = [];
-  const ftp = base;
+
+  const obj = { files: [] };
+
+  // getFiles возвращает массив файлов и папок первого уровня каталога base
   const getFiles = base => fs.readdirSync(base);
+
   function func(item) {
+    // currentDir возвращает абсолютный путь к файлу от диска
     const currentDir = path.join(this.root, item);
     const state = fs.statSync(currentDir);
     if (state.isDirectory(currentDir)) {
@@ -19,11 +23,11 @@ const search = base => {
           getFiles(currentDir).map(func, { root: currentDir });
       }
     } else {
-      arr.push(path.relative(base, currentDir));
+      obj.files.push(path.relative(base, currentDir));
     }
   }
   getFiles(base).map(func, { root: base });
-  return arr;
+  return obj;
 };
 
 module.exports = search;

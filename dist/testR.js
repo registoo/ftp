@@ -24024,7 +24024,7 @@ module.exports = g;
 /*! exports provided: files, default */
 /***/ (function(module) {
 
-module.exports = {"files":["index.html","testR.js","testR.js.map","Крыгина Елена - Макияж - 2017.pdf","Новая папка\\mov_bbb.mp4","прибытие поезда.avi"]};
+module.exports = {"files":["index.html","testR.js","testR.js.map","Новая папка\\mov_bbb.mp4"]};
 
 /***/ }),
 
@@ -24034,6 +24034,24 @@ module.exports = {"files":["index.html","testR.js","testR.js.map","Крыгин�
   \*********************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
+
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
 var _require = __webpack_require__(/*! ./files.json */ "./src/files.json"),
     files = _require.files;
@@ -24045,26 +24063,65 @@ var _require2 = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/i
 
 var path = __webpack_require__(/*! path */ "./node_modules/path-browserify/index.js");
 
+var FTPfiles =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(FTPfiles, _React$Component);
+
+  function FTPfiles(props) {
+    var _this;
+
+    _classCallCheck(this, FTPfiles);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(FTPfiles).call(this, props));
+    _this.state = {
+      cross: true
+    };
+    return _this;
+  }
+
+  _createClass(FTPfiles, [{
+    key: "handleClick",
+    value: function handleClick() {
+      alert(this.state.cross);
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var _this2 = this;
+
+      return React.createElement(HelloWorld, {
+        files: files,
+        onClick: function onClick() {
+          return _this2.handleClick();
+        }
+      });
+    }
+  }]);
+
+  return FTPfiles;
+}(React.Component);
+
 function HelloWorld(props) {
-  var f = Ff(props.files);
-  return React.createElement("ul", null, f);
+  function liFTP(arr) {
+    var a = arr.map(function (elem, i) {
+      i++;
+      return React.createElement("li", {
+        key: i
+      }, React.createElement("a", {
+        href: elem
+      }, elem));
+    });
+    return a;
+  }
+
+  var f = liFTP(props.files);
+  return React.createElement("div", null, React.createElement("button", {
+    onClick: props.onClick
+  }, "+"), React.createElement("ul", null, f), ";");
 }
 
-function Ff(arr) {
-  var a = arr.map(function (elem, i) {
-    i++;
-    return React.createElement("li", {
-      key: i
-    }, React.createElement("a", {
-      href: elem
-    }, elem));
-  });
-  return a;
-}
-
-render(React.createElement(HelloWorld, {
-  files: files
-}), document.getElementById("root"));
+render(React.createElement(FTPfiles, null), document.getElementById("root"));
 
 /***/ })
 
