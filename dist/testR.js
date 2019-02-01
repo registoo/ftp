@@ -24063,6 +24063,14 @@ var _require2 = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/i
 
 var path = __webpack_require__(/*! path */ "./node_modules/path-browserify/index.js");
 
+function FilesFromButton(props) {
+  if (props.filesButton) {
+    return null;
+  }
+
+  return React.createElement("div", null, "qwe");
+}
+
 var FTPfiles =
 /*#__PURE__*/
 function (_React$Component) {
@@ -24075,7 +24083,7 @@ function (_React$Component) {
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(FTPfiles).call(this, props));
     _this.state = {
-      value: "+"
+      filesButton: true
     };
     return _this;
   }
@@ -24096,31 +24104,23 @@ function (_React$Component) {
   }, {
     key: "handlerButtonValue",
     value: function handlerButtonValue() {
-      switch (this.state.value) {
-        case "+":
-          this.setState({
-            value: "-"
-          });
-          break;
-
-        case "-":
-          this.setState({
-            value: "+"
-          });
-          break;
-      }
+      this.setState({
+        filesButton: !this.state.filesButton
+      });
     }
   }, {
     key: "render",
     value: function render() {
       var _this2 = this;
 
-      return React.createElement("div", null, React.createElement("button", {
+      return React.createElement("div", null, React.createElement("div", null, React.createElement("button", {
         onClick: function onClick() {
           return _this2.handlerButtonValue();
         },
         className: "buttonFiles"
-      }, this.state.value), React.createElement("ul", null, this.liFTP(files)), ";");
+      }, this.state.filesButton ? "+" : "-"), React.createElement(FilesFromButton, {
+        filesButton: this.state.filesButton
+      })), React.createElement("ul", null, this.liFTP(files)), ";");
     }
   }]);
 
@@ -24128,6 +24128,7 @@ function (_React$Component) {
 }(React.Component);
 
 render(React.createElement(FTPfiles, null), document.getElementById("root"));
+module.exports.welcome = alert("привет мир !!!");
 
 /***/ })
 
