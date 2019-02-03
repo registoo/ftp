@@ -1,0 +1,19 @@
+{
+  "files": [
+    "index.html",
+    "mysite.css",
+    "testR.js",
+    "testR.js.map"
+  ],
+  "Новая папка": {
+    "New folder": {
+      "files": [
+        "Новая папка\\New folder\\mov_bbb.mp4"
+      ]
+    },
+    "files": [
+      "Новая папка\\test.txt",
+      "Новая папка\\asdfghjkl.txt"
+    ]
+  }
+}

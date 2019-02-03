@@ -1,8 +1,11 @@
 {
   "files": [
     "index.html",
+    "mysite.css",
     "testR.js",
     "testR.js.map",
-    "Новая папка\\mov_bbb.mp4"
+    "Новая папка\\New folder\\mov_bbb.mp4",
+    "Новая папка\\test.txt",
+    "Новая папка\\asdfghjkl.txt"
   ]
 }

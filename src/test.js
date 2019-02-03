@@ -49,4 +49,3 @@ class FTPfiles extends React.Component {
 }
 
 render(<FTPfiles />, document.getElementById("root"));
-module.exports.welcome = alert("привет мир !!!");
