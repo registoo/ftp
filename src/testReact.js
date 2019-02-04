@@ -1,8 +1,10 @@
 const path = require("path");
 const fs = require("fs");
 const fi = require("./serverSide/getFiles");
-const files = fi.flatten(__dirname);
+const files = fi.flatten(__dirname).files;
 function separator(mustBeArray) {
+  const obj = {};
+
   function addFile(elem, targetObj) {
     if (targetObj.hasOwnProperty("files") && Array.isArray(targetObj.files)) {
       targetObj.files.push(elem);
@@ -18,7 +20,6 @@ function separator(mustBeArray) {
     if (err) throw err;
   };
   function innerMap(elem) {
-    const obj = {};
     const separatePathToArr = elem.split(path.sep);
     const file = separatePathToArr.slice().pop();
     const dir = separatePathToArr.slice(0, -1);
@@ -34,8 +35,9 @@ function separator(mustBeArray) {
     addFile(elem, pathToFile);
     return obj;
   }
+  console.log(mustBeArray);
   mustBeArray.map(innerMap);
 }
-const a = separator(__dirname);
-console.logcmd(a);
+const a = separator(files);
+console.log(a);
 // fs.writeFile("src/filesForReact.json", JSON.stringify(obj, false, 2), callback);
