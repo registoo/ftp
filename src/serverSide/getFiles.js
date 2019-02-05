@@ -1,7 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 
-const search = base => {
+const searchFlatten = base => {
   // base should be a string
 
   const obj = { files: [] };
@@ -30,4 +30,4 @@ const search = base => {
   return obj;
 };
 
-module.exports = search;
+module.exports.flatten = searchFlatten;
