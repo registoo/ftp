@@ -1,35 +1,21 @@
 {
-  "files": [
-    "index.html",
-    "mysite.css",
-    "testR.js",
-    "testR.js.map"
-  ],
+  "files": ["index.html", "mysite.css", "testR.js", "testR.js.map"],
   "qw": {
-    "files": [
-      "qw\\q.q"
-    ]
+    "files": ["qw\\q.q"]
   },
   "Новая папка": {
-    "files": [
-      "Новая папка\\asdfghjkl.txt",
-      "Новая папка\\test.txt"
-    ],
+    "files": ["Новая папка\\asdfghjkl.txt", "Новая папка\\test.txt"],
     "New folder": {
       "files": [
         "Новая папка\\New folder\\1.txt",
         "Новая папка\\New folder\\mov_bbb.mp4"
       ],
-      "new f": {
-        "files": [
-          "Новая папка\\New folder\\new f\\beirlbrvierbverbvjkerv.ww"
-        ]
+      "kakaya-to papka": {
+        "files": ["Новая папка\\New folder\\new f\\beirlbrvierbverbvjkerv.ww"]
       }
     },
     "old folder": {
-      "files": [
-        "Новая папка\\old folder\\test.q"
-      ]
+      "files": ["Новая папка\\old folder\\test.q"]
     }
   }
 }

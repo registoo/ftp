@@ -2,3 +2,15 @@ button {
   width: 40px;
   height: 20px;
 }
+.flexbox {
+  display: flex;
+  flex-direction: row;
+}
+.leftCol {
+  width: 100px;
+}
+.rightCol {
+  background-color: red;
+  margin-top: 5px;
+  width: 200px;
+}

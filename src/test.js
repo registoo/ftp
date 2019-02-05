@@ -1,51 +1,61 @@
-const { files } = require("./files.json");
+const files = require("./files.json");
 const React = require("react");
 const { render } = require("react-dom");
-const path = require("path");
-function FilesFromButton(props) {
-  if (props.filesButton) {
+
+function FTPfiles(props) {
+  console.log(props.startDir);
+  const arr = Object.getOwnPropertyNames(props.startDir);
+  if (arr.length == 0) {
     return null;
   }
-  return <div>qwe</div>;
+  const a = arr.map((elem, id) => {
+    if (elem === "files") {
+      return null;
+    }
+    return <DirFile dirName={elem} dirObj={props.startDir[elem]} key={id} />;
+  });
+  return a;
 }
-class FTPfiles extends React.Component {
+class DirFile extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       filesButton: true
     };
   }
-  liFTP(arr) {
-    const a = arr.map((elem, i) => {
-      i++;
-      return (
-        <li key={i}>
-          <a href={elem}>{elem}</a>
-        </li>
-      );
-    });
-    return a;
-  }
   handlerButtonValue() {
     this.setState({ filesButton: !this.state.filesButton });
   }
-
-  render() {
+  fu() {
     return (
-      <div>
-        <div>
-          <button
-            onClick={() => this.handlerButtonValue()}
-            className="buttonFiles"
-          >
+      <div className="flexbox">
+        <div className="leftCol">
+          <button onClick={() => this.handlerButtonValue()}>
             {this.state.filesButton ? "+" : "-"}
           </button>
-          <FilesFromButton filesButton={this.state.filesButton} />
+          <FilesFromButton
+            filesButton={this.state.filesButton}
+            dirObj={this.props.dirObj}
+          />
         </div>
-        <ul>{this.liFTP(files)}</ul>;
+        <div className="rightCol">{this.props.dirName}</div>
       </div>
     );
   }
+  render() {
+    return <div>{this.fu()}</div>;
+  }
 }
 
-render(<FTPfiles />, document.getElementById("root"));
+function FilesFromButton(props) {
+  if (props.filesButton) {
+    return null;
+  }
+  return (
+    <div>
+      <FTPfiles startDir={props.dirObj} />
+    </div>
+  );
+}
+
+render(<FTPfiles startDir={files} />, document.getElementById("root"));
