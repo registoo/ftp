@@ -1,14 +1,9 @@
 const fs = require("fs");
-const getFiles = require("./getFiles");
 const path = require("path");
+const getFilesDipper = require("./getFiles").dipper;
 
-const callback = err => {
-  if (err) throw err;
-};
+const searchDir = path.join(__dirname, "../../dist");
+const targetDir = path.join("src", "files.json");
 
-function f(base, targetDir) {
-  const filesObj = getFiles(base);
-  fs.writeFile(targetDir, JSON.stringify(filesObj, false, 2), callback);
-}
-
-module.exports = f;
+// в targetDir получает объет файлов JSON петём перезаписи файла
+getFilesDipper(searchDir, targetDir);
