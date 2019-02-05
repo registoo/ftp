@@ -24024,7 +24024,7 @@ module.exports = g;
 /*! exports provided: files, default */
 /***/ (function(module) {
 
-module.exports = {"files":["index.html","testR.js","testR.js.map","Новая папка\\mov_bbb.mp4"]};
+module.exports = {"files":["index.html","mysite.css","testR.js","testR.js.map","Новая папка\\qwe\\mov_bbb.mp4"]};
 
 /***/ }),
 
@@ -24128,7 +24128,6 @@ function (_React$Component) {
 }(React.Component);
 
 render(React.createElement(FTPfiles, null), document.getElementById("root"));
-module.exports.welcome = alert("привет мир !!!");
 
 /***/ })
 
