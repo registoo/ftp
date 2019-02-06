@@ -18,7 +18,9 @@ function FTPfiles(props) {
     id += 1;
     return result;
   });
-  a.push(<DivFiles arrOfElem={props.startDir.files} key={id} />);
+  if (props.startDir.files) {
+    a.push(<DivFiles arrOfElem={props.startDir.files} key={id} />);
+  }
   return a;
 }
 class DirFile extends React.Component {
@@ -62,9 +64,12 @@ function FilesFromButton(props) {
 
 function DivFiles(props) {
   const a = props.arrOfElem.map((elem, id) => {
-    const separatePathToArr = elem.split(path.sep);
-    console.log("foo\\bar\\baz".split(path.sep));
-    return <div key={id}>{elem}</div>;
+    const separatePathToArr = elem.split("\\");
+    return (
+      <div key={id}>
+        <a href={elem}>{separatePathToArr[separatePathToArr.length - 1]}</a>
+      </div>
+    );
   });
   return a;
 }
