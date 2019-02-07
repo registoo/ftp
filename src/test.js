@@ -36,10 +36,10 @@ class DirFile extends React.Component {
   render() {
     return (
       <div>
-        <button onClick={() => this.handlerButtonValue()}>
-          {this.state.filesButton ? "+" : "-"}
-        </button>
-        {this.props.dirName}
+        <div onClick={() => this.handlerButtonValue()} className="directory">
+          <span className="dirPlus">{this.state.filesButton ? "+" : "-"} </span>
+          <div className="dirStr">{this.props.dirName}</div>
+        </div>
         <div className="childMargin">
           <FilesFromButton
             filesButton={this.state.filesButton}
