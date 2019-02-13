@@ -2,6 +2,7 @@ const files = require("./files.json");
 const React = require("react");
 const { render } = require("react-dom");
 const path = require("path");
+require("./mysite.sass");
 function FTPfiles(props) {
   const arr = Object.getOwnPropertyNames(props.startDir);
   if (arr.length == 0) {

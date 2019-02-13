@@ -1,14 +1,16 @@
 {
   "files": [
-    "index.html",
-    "mysite.css",
-    "testR.js",
-    "testR.js.map"
+    "index.html"
   ],
   "Новая папка": {
     "files": [
       "Новая папка\\mov_bbb.mp4",
       "Новая папка\\videoplayback.mp4"
-    ]
+    ],
+    "Папка второй уровень": {
+      "files": [
+        "Новая папка\\Папка второй уровень\\файл.расширение"
+      ]
+    }
   }
 }
