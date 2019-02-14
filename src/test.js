@@ -37,11 +37,17 @@ class DirFile extends React.Component {
   render() {
     return (
       <div>
-        <div onClick={() => this.handlerButtonValue()} className="directory">
-          <span className="dirPlus">{this.state.filesButton ? "+" : "-"} </span>
-          <div className="dirStr">{this.props.dirName}</div>
+        <div className="directory">
+          {this.state.filesButton ? (
+            <span onClick={() => this.handlerButtonValue()}>&#9658;</span>
+          ) : (
+            <span onClick={() => this.handlerButtonValue()}>&#9660;</span>
+          )}
+          <div onClick={() => this.handlerButtonValue()} className="dirStr">
+            {this.props.dirName}
+          </div>
         </div>
-        <div className="childMargin">
+        <div>
           <FilesFromButton
             filesButton={this.state.filesButton}
             dirObj={this.props.dirObj}
@@ -57,7 +63,7 @@ function FilesFromButton(props) {
     return null;
   }
   return (
-    <div>
+    <div className="child">
       <FTPfiles startDir={props.dirObj} />
     </div>
   );
@@ -67,7 +73,7 @@ function DivFiles(props) {
   const a = props.arrOfElem.map((elem, id) => {
     const separatePathToArr = elem.split("\\");
     return (
-      <div key={id}>
+      <div key={id} className="file">
         <a href={elem}>{separatePathToArr[separatePathToArr.length - 1]}</a>
       </div>
     );
