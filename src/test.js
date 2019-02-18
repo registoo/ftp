@@ -1,8 +1,9 @@
-const files = require("./files.json");
+const files = require("./clientSide/files.json");
 const React = require("react");
 const { render } = require("react-dom");
 const path = require("path");
-require("./mysite.sass");
+const isVideo = require("./clientSide/isVideo");
+require("./clientSide/mysite.sass");
 function FTPfiles(props) {
   const arr = Object.getOwnPropertyNames(props.startDir);
   if (arr.length == 0) {
@@ -72,9 +73,11 @@ function FilesFromButton(props) {
 function DivFiles(props) {
   const a = props.arrOfElem.map((elem, id) => {
     const separatePathToArr = elem.split("\\");
+    const fileName = separatePathToArr[separatePathToArr.length - 1];
     return (
       <div key={id} className="file">
-        <a href={elem}>{separatePathToArr[separatePathToArr.length - 1]}</a>
+        {isVideo(elem, fileName)}
+        {/* mp4 or webm*/}
       </div>
     );
   });
