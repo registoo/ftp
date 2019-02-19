@@ -11,7 +11,7 @@ function FTPfiles(props) {
   }
   let id = 0;
   const a = arr.map(elem => {
-    if (elem === "files") {
+    if (elem === "__files__") {
       return null;
     }
     const result = (
@@ -20,8 +20,8 @@ function FTPfiles(props) {
     id += 1;
     return result;
   });
-  if (props.startDir.files) {
-    a.push(<DivFiles arrOfElem={props.startDir.files} key={id} />);
+  if (props.startDir.__files__) {
+    a.push(<DivFiles arrOfElem={props.startDir.__files__} key={id} />);
   }
   return a;
 }
