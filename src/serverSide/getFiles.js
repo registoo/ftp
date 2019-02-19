@@ -1,5 +1,6 @@
 const fs = require("fs");
 const path = require("path");
+const checkSHA1 = require("./checkSHA1");
 
 const searchFiles = base => {
   // base should be a string
