@@ -1,16 +1,30 @@
 const fs = require("fs");
+const path = require("path");
 
 function initJSON(dirName) {
-  const lookingStats = (err, stats) => {
-    console.log(stats);
+
+
+  function lookingStats (err, stats) {
+    if (err) {
+      console.log(err);
+      return;
+    }
+    console.log(`stats: ${stats.isFile()}`);
   };
-  const lookingFIles = (err, files) => {
-    files.map(elem => {
-      console.log(elem);
-      fs.stat(elem, lookingStats);
-    });
+
+
+  async function lookingFiles (err, files) {
+    return files;
+    // files.map(elem => {
+    //   fs.stat(path.join(dirName, elem), lookingStats);
+    // });
   };
-  fs.readdir(dirName, lookingFIles);
+
+
+  const arr = fs.readdir(dirName, await lookingFiles);
+  console.log(arr)
+
 }
+
 
 initJSON(__dirname);
