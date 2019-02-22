@@ -1,30 +1,29 @@
-const fs = require("fs");
+// const fs = require("fs");
 const path = require("path");
+// const util = require("util");
+//
+// function initJSON(dirName) {
+//   function lookingStats(elem) {
+//     const stats = util.promisify(fs.stat);
+//     const fullPath = path.join(__dirname, elem);
+//     stats(fullPath)
+//       .then(stats => {
+//         console.log(`elem: ${elem}\r\nstats: ${stats.isFile()}`);
+//       })
+//       .catch(err => console.log(err));
+//   }
+//
+//   const arr = util.promisify(fs.readdir);
+//   arr(dirName)
+//     .then(files => {
+//       files.map(lookingStats);
+//     })
+//     .catch(err => console.log(err));
+//   console.log(arr);
+// }
 
-function initJSON(dirName) {
-
-
-  function lookingStats (err, stats) {
-    if (err) {
-      console.log(err);
-      return;
-    }
-    console.log(`stats: ${stats.isFile()}`);
-  };
-
-
-  async function lookingFiles (err, files) {
-    return files;
-    // files.map(elem => {
-    //   fs.stat(path.join(dirName, elem), lookingStats);
-    // });
-  };
-
-
-  const arr = fs.readdir(dirName, await lookingFiles);
-  console.log(arr)
-
-}
-
-
-initJSON(__dirname);
+// initJSON(__dirname);
+const _ = require("lodash");
+const sha = require("./serverSide/checkSHA1.js").SHA1toFile;
+const q = path.join(__dirname, "test.js");
+sha(q);

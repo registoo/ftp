@@ -1,6 +1,8 @@
 const { spawnSync } = require("child_process");
 const fs = require("fs");
 const path = require("path");
+const _ = require("lodash");
+const util = require("util");
 
 const checkSHA1 = file => {
   function isValidSHA1(s) {
@@ -18,37 +20,34 @@ const checkSHA1 = file => {
   }
   return result[0];
 };
+// смотрит в __JSON_SHA1__
+function intoJSON(file) {
+  console.log(file);
+  const a = require(path.join(__dirname, file));
+  console.log(Object.getOwnPropertyNames(a));
+  // fs.writeFile(targetDir, JSON.stringify(file, false, 2), err => {
+  //   if (err) throw err;
+  // });
+}
 
-function injectJson(filesObj, targetDir) {
-  const callback = err => {
-    if (err) throw err;
-  };
-  fs.writeFile(targetDir, JSON.stringify(filesObj, false, 2), callback);
+function injectJson(arr, targetDir) {
+  const filesInDir = util.promisify(fs.readdir);
+  filesInDir(targetDir)
+    .then(arr => {
+      const elemIndex = _.indexOf(arr, "__JSON_SHA1__.json");
+      elemIndex ? intoJSON(arr[elemIndex]) : console.log("джейсона нет");
+    })
+    .catch(err => console.log(err));
 }
 
 const SHA1toFile = file => {
+  // добываем SHA1 файла
   const SHA1 = checkSHA1(file);
-  const obj = { [file]: SHA1 };
-  injectJson(obj, path.join(__dirname, "__JSON_SHA1__.json"));
-  console.log("SHA1 done");
-};
-
-function initJSON = (dirName) => {
-  const obj = {}
-  const files = fs.readdir(dirname, (err, files)=>{
-    files.map(elem => {
-      fs.stat(elem, (err, stats) => {
-        if (stats.isFile(currentDir)) {
-          obj[elem] =
-        }
-      });
-
-    })
-  })
-
-  })
+  // создаём массив с названием файла и его хэшем
+  const arr = [file, SHA1];
+  // записываем созданный массив в JSON
+  injectJson(arr, __dirname);
 };
 
 module.exports.checkSHA1 = checkSHA1;
 module.exports.SHA1toFile = SHA1toFile;
-module.exports.initJSON = initJSON;
