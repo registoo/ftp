@@ -3,6 +3,7 @@ const fs = require("fs");
 const path = require("path");
 const _ = require("lodash");
 const util = require("util");
+const crypto = require("crypto");
 
 const checkSHA1 = file => {
   function isValidSHA1(s) {
@@ -22,7 +23,6 @@ const checkSHA1 = file => {
 };
 // смотрит в __JSON_SHA1__
 function intoJSON(file) {
-  console.log(file);
   const a = require(path.join(__dirname, file));
   console.log(Object.getOwnPropertyNames(a));
   // fs.writeFile(targetDir, JSON.stringify(file, false, 2), err => {
@@ -35,19 +35,41 @@ function injectJson(arr, targetDir) {
   filesInDir(targetDir)
     .then(arr => {
       const elemIndex = _.indexOf(arr, "__JSON_SHA1__.json");
-      elemIndex ? intoJSON(arr[elemIndex]) : console.log("джейсона нет");
+      elemIndex >= 0 ? intoJSON(arr[elemIndex]) : console.log("джейсона нет");
     })
     .catch(err => console.log(err));
 }
 
-const SHA1toFile = file => {
+async function SHA1toFile(directory) {
   // добываем SHA1 файла
-  const SHA1 = checkSHA1(file);
-  // создаём массив с названием файла и его хэшем
-  const arr = [file, SHA1];
-  // записываем созданный массив в JSON
-  injectJson(arr, __dirname);
-};
+  async function readDir(dir) {
+    const filesInDir = util.promisify(fs.readdir);
+    return await filesInDir(dir);
+  }
+  async function isDir(file) {
+    const getStats = util.promisify(fs.stat);
+    const stats = await getStats(file);
+    if (stats.isDirectory()) {
+      return true;
+    }
+    return false;
+  }
+  const arrOfFiles = await readDir(directory);
+  const arrOfFilesWithSHA1 = arrOfFiles.reduce((acc, elem) => {
+    const fullPath = path.join(directory, elem);
+    if (isDir(fullPath)) {
+      const SHA1 = checkSHA1(fullPath);
+      acc.push([fullPath, SHA1]);
+    }
+    return acc;
+  }, []);
+  console.log(arrOfFilesWithSHA1);
+  // const SHA1 = checkSHA1(file);
+  // // создаём массив с названием файла и его хэшем
+  // const arr = [file, SHA1];
+  // // записываем созданный массив в JSON
+  // injectJson(arr, __dirname);
+}
 
 module.exports.checkSHA1 = checkSHA1;
 module.exports.SHA1toFile = SHA1toFile;

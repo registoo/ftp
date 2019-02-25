@@ -15,7 +15,6 @@ const f = (file, eventype) => {
     }
     const state = fs.statSync(file);
     if (state.isFile(file)) {
-      console.log("is file");
       SHA1toFile(file);
     }
   });

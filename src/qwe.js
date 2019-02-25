@@ -23,7 +23,5 @@ const path = require("path");
 // }
 
 // initJSON(__dirname);
-const _ = require("lodash");
-const sha = require("./serverSide/checkSHA1.js").SHA1toFile;
-const q = path.join(__dirname, "test.js");
-sha(q);
+const q = require("./serverside/checkSHA1").SHA1toFile;
+q(__dirname);
