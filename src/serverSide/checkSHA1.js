@@ -4,7 +4,6 @@ const path = require("path");
 const _ = require("lodash");
 const util = require("util");
 const crypto = require("crypto");
-const isFile = require("./isFile.js");
 const readDirAsync = require("./readDirAsync.js");
 
 const checkSHA1 = file => {
@@ -44,18 +43,14 @@ function injectJson(arr, targetDir) {
 
 async function SHA1toFile(directory) {
   const arrOfFiles = await readDirAsync(directory);
-  async function f(acc, elem) {
-    const fullPath = path.join(directory, elem);
-    const q = await isFile(fullPath);
-    if (q) {
-      const SHA1 = checkSHA1(fullPath);
-      acc.push([fullPath, SHA1]);
-    }
-    return acc;
-  }
-  const arrOfFilesWithSHA1 = arrOfFiles.reduce(await f, []);
+  arrOfFiles.map(elem => {
+    const isFile = require("./isFile.js");
+    const fullPath = path.join(__dirname, "..", elem);
+    isFile(fullPath)
+      .then(elem => console.log(elem))
+      .catch(err => console.log(err));
+  });
 
-  console.log(arrOfFilesWithSHA1);
   // const SHA1 = checkSHA1(file);
   // // создаём массив с названием файла и его хэшем
   // const arr = [file, SHA1];
