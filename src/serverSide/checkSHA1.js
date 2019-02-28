@@ -44,16 +44,13 @@ function injectJson(arr, targetDir) {
 
 async function SHA1toFile(directory) {
   const arrOfFiles = await readDirAsync(directory);
-  const func = async (acc, elem) => {
+  const newArr = arrOfFiles.map(async function(elem) {
     const fullPath = path.join(directory, elem);
-    const str = await isFile(fullPath);
-    if (str) {
-      acc.push(fullPath);
+    if (await isFile(fullPath)) {
+      const SHA1 = checkSHA1(fullPath);
+      return { fullPath };
     }
-    return acc;
-  };
-  const newArr = arrOfFiles.reduce(func, []);
-  console.log(arrOfFiles, newArr);
+  });
 
   // const SHA1 = checkSHA1(file);
   // // создаём массив с названием файла и его хэшем
