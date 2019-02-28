@@ -1,9 +1,6 @@
 const { spawnSync } = require("child_process");
 const fs = require("fs");
 const path = require("path");
-const _ = require("lodash");
-const util = require("util");
-const crypto = require("crypto");
 const readDirAsync = require("./readDirAsync.js");
 const isFile = require("./isFile.js");
 
@@ -23,40 +20,41 @@ const checkSHA1 = file => {
   }
   return result[0];
 };
-// смотрит в __JSON_SHA1__
 function intoJSON(file) {
   const a = require(path.join(__dirname, file));
   console.log(Object.getOwnPropertyNames(a));
-  // fs.writeFile(targetDir, JSON.stringify(file, false, 2), err => {
-  //   if (err) throw err;
-  // });
 }
 
-function injectJson(arr, targetDir) {
-  const filesInDir = util.promisify(fs.readdir);
-  filesInDir(targetDir)
-    .then(arr => {
-      const elemIndex = _.indexOf(arr, "__JSON_SHA1__.json");
-      elemIndex >= 0 ? intoJSON(arr[elemIndex]) : console.log("джейсона нет");
-    })
-    .catch(err => console.log(err));
-}
-
-async function SHA1toFile(directory) {
+async function SHA1toFile(directory, objForJSON = {}) {
   const arrOfFiles = await readDirAsync(directory);
-  const newArr = arrOfFiles.map(async function(elem) {
+
+  async function addSHA1(elem) {
     const fullPath = path.join(directory, elem);
     if (await isFile(fullPath)) {
       const SHA1 = checkSHA1(fullPath);
-      return { fullPath };
+      objForJSON[fullPath] = SHA1;
+    } else {
+      const innerObj = await SHA1toFile(fullPath);
+      function jsonConcat(o1, o2) {
+        for (var key in o2) {
+          o1[key] = o2[key];
+        }
+        return o1;
+      }
+      jsonConcat(objForJSON, innerObj);
     }
-  });
+  }
 
-  // const SHA1 = checkSHA1(file);
-  // // создаём массив с названием файла и его хэшем
-  // const arr = [file, SHA1];
-  // // записываем созданный массив в JSON
-  // injectJson(arr, __dirname);
+  const asyncMap = async (arr, func) => {
+    const last = arr.pop();
+    if (last) {
+      await func(last);
+      await asyncMap(arr, func);
+    }
+  };
+
+  await asyncMap(arrOfFiles, addSHA1);
+  return objForJSON;
 }
 
 module.exports.checkSHA1 = checkSHA1;

@@ -24,4 +24,13 @@ const path = require("path");
 
 // initJSON(__dirname);
 const q = require("./serverside/checkSHA1").SHA1toFile;
-q(__dirname);
+const a = q(__dirname);
+a.then(qwe => console.log(qwe));
+//
+// fs.writeFile(
+//   "src/serverside/__JSON_SHA1__.json",
+//   JSON.stringify(objForJSON, false, 2),
+//   err => {
+//     if (err) throw err;
+//   }
+// );
