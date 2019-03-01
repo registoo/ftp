@@ -20,6 +20,7 @@ const checkSHA1 = file => {
   }
   return result[0];
 };
+
 function intoJSON(file) {
   const a = require(path.join(__dirname, file));
   console.log(Object.getOwnPropertyNames(a));
