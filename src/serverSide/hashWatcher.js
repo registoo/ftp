@@ -1,35 +1,54 @@
 const fs = require("fs");
 const path = require("path");
-const getHash = require("./getHash");
+const getHash = require("./helpers/getHash");
+const util = require("util");
 
-const writeFile = JsonOfHashes => {
+// записывает переданный JSON-объект в file. ENOENT - если нет файла
+const writeFile = (JsonOfHashes, file, ENOENT) => {
   fs.writeFile(
     "src/serverSide/__JSON_SHA1__.json",
     JSON.stringify(JsonOfHashes, false, 2),
     err => {
       if (err) throw err;
-      console.log("The file has been saved!");
+      if (ENOENT) {
+        console.log(`Файл \"${file}\" был удалён или не найден`);
+        return;
+      }
+      console.log(`Файл \"${file}\" был изменён`);
     }
   );
 };
 
 module.exports = async function(serveDir) {
+  // рекурсивно смотрит в папку
   fs.watch(serveDir, { recursive: true }, (eventype, filename) => {
-    async function func(eventype, filename) {
-      const fullFilePath = path.join(serveDir, filename);
-      const JsonOfHashes = require("./__JSON_SHA1__");
-      const currentHash = await getHash(fullFilePath);
-
-      // fs.access(filename, fs.constants.F_OK, err => {
-      //   console.log(`${filename} ${err ? "does not exist" : "exists"}`);
-      // });
-
-      if (currentHash !== JsonOfHashes[fullFilePath]) {
-        JsonOfHashes[fullFilePath] = currentHash;
-        writeFile(JsonOfHashes);
+    const fullFilePath = path.join(serveDir, filename);
+    try {
+      // если fullFilePath является папкой, передаётся аргумент ENOENT как false
+      fs.statSync(fullFilePath).isFile() ? func(false) : null;
+    } catch (err) {
+      // если ошибка, передаётся аргумент ENOENT как true
+      if (err.code === "ENOENT") {
+        func(true);
         return;
       }
+      console.log(`>>> Какая-то ошибка в hashWatcher.js.\r\n${err}`);
     }
-    func(eventype, filename);
+
+    async function func(ENOENT) {
+      const JsonOfHashes = require("./__JSON_SHA1__.json");
+      // если файла не существует или удалили - убирает из JSON
+      if (ENOENT) {
+        JsonOfHashes[fullFilePath] = undefined;
+        writeFile(JsonOfHashes, fullFilePath, true);
+        return;
+      }
+      // если Хэш файла изменился - обновляет Хэш для файла в JSON
+      const currentHash = await getHash(fullFilePath);
+      if (currentHash !== JsonOfHashes[fullFilePath]) {
+        JsonOfHashes[fullFilePath] = currentHash;
+        writeFile(JsonOfHashes, fullFilePath);
+      }
+    }
   });
 };

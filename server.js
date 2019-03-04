@@ -6,18 +6,15 @@ const hashWatcher = require("./src/serverSide/hashWatcher");
 const initJsonHash = require("./src/serverside/initJsonHash");
 
 const serveDir = "dist";
+// делает абсолютный путь к папке
 const serveFullDir = path.join(__dirname, serveDir);
 
-// fs.watch("./dist", { recursive: true }, (eventype, filename) => {
-//   console.log("----------------- WATCHER IS ON -----------------");
-//   const fullFilePath = path.join(serveFullDir, filename);
-//   hashWatcher(fullFilePath, eventype);
-// });
-
 async function mainFunction(dir) {
+  // инициализирует JSON с хэшами файлов в папке dir
   await initJsonHash(dir, "SHA1");
-  hashWatcher(serveFullDir);
-  app.use(express.static(serveDir));
+  // ставит вотчера на папку dir
+  hashWatcher(dir);
+  app.use(express.static(dir));
 
   app.listen(3000, function() {
     console.log("Example app listening on port 3000!");

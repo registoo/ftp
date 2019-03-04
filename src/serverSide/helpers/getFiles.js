@@ -1,6 +1,6 @@
 const fs = require("fs");
 const path = require("path");
-const checkSHA1 = require("./checkSHA1");
+const checkSHA1 = require("./getHash");
 
 const searchFiles = base => {
   // base should be a string
@@ -12,17 +12,11 @@ const searchFiles = base => {
     const currentDir = path.join(this.root, item);
     const state = fs.statSync(currentDir);
     if (state.isDirectory(currentDir)) {
-      switch (true) {
-        case item[0] == ".":
-          break;
-        case item == "node_modules":
-          break;
-        default:
-          getFiles(currentDir).map(func, { root: currentDir });
-      }
-    } else {
-      obj.__files__.push(path.relative(base, currentDir));
+      getFiles(currentDir).map(func, { root: currentDir });
+      return;
     }
+    console.log(base, " ", currentDir, " ", path.relative(base, currentDir));
+    obj.__files__.push(path.relative(base, currentDir));
   }
   getFiles(base).map(func, { root: base });
   return obj;
@@ -61,20 +55,17 @@ function innerSeparator(mustBeArray) {
   mustBeArray.map(innerMap);
   return obj;
 }
-const callback = err => {
-  if (err) throw err;
-};
-function injectJson(filesObj, targetDir) {
-  fs.writeFile(targetDir, JSON.stringify(filesObj, false, 2), callback);
-}
+
 function searchFlatten(base, targetDir) {
   const obj = searchFiles(base);
   injectJson(obj, targetDir);
 }
 function separator(base, targetDir) {
-  const obj = searchFiles(base).__files__;
-  const separator = innerSeparator(obj);
-  injectJson(separator, targetDir);
+  const obj = require("../__json_sha1__.json");
+  const properties = Object.getOwnPropertyNames(obj).sort();
+  console.log(properties);
+  // const separator = innerSeparator(obj);
+  // injectJson(separator, targetDir);
 }
 // searchFiles возвращает объект со свойством files со списком файлов директории.
 // searchFlatten берёт массив searchFiles и добавляет его в файл JSON targetDir.
@@ -82,5 +73,14 @@ function separator(base, targetDir) {
 //           плоский массив в 3D вид. Добавляет результат в файл JSON targetDir.
 // base - директория для поиска файлов.
 // targetDir - файл JSON для записи найденных файлов.
-module.exports.flatten = searchFlatten;
-module.exports.dipper = separator;
+
+const callback = err => {
+  if (err) throw err;
+};
+function injectJson(filesObj, targetDir) {
+  fs.writeFile(targetDir, JSON.stringify(filesObj, false, 2), callback);
+}
+
+// module.exports = separator;
+
+separator("dist");

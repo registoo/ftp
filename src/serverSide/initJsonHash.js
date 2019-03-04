@@ -1,9 +1,9 @@
 const fs = require("fs");
 const path = require("path");
-const readDirAsync = require("./readDirAsync.js");
-const isFile = require("./isFile.js");
-const getHash = require("./getHash.js");
-const asyncMap = require("./asyncMap.js");
+const readDirAsync = require("./helpers/readDirAsync.js");
+const isFile = require("./helpers/isFile.js");
+const getHash = require("./helpers/getHash.js");
+const asyncMap = require("./helpers/asyncMap.js");
 
 async function objOfHashes(directory, algorithm, encoding, objForJSON = {}) {
   const arrOfFiles = await readDirAsync(directory);
