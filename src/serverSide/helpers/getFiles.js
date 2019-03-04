@@ -62,8 +62,12 @@ function searchFlatten(base, targetDir) {
 }
 function separator(base, targetDir) {
   const obj = require("../__json_sha1__.json");
-  const properties = Object.getOwnPropertyNames(obj).sort();
-  console.log(properties);
+  const properties = Object.getOwnPropertyNames(obj);
+  properties.map(elem => {
+    const dist = path.join(__dirname, "../../../dist");
+    const innerDir = path.relative(dist, elem);
+    console.log(innerDir.split(path.sep));
+  });
   // const separator = innerSeparator(obj);
   // injectJson(separator, targetDir);
 }
