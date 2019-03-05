@@ -1,1 +1,7 @@
 node_modules
+
+dist/testR.js
+dist/testR.js.map
+
+src/clientSide/files.json
+src/serverSide/__JSON_SHA1__.json
