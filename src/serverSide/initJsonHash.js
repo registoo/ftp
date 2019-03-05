@@ -24,8 +24,6 @@ async function objOfHashes(directory, algorithm, encoding, objForJSON = {}) {
 
 module.exports = async function(directory, algorithm, encoding) {
   const obj = await objOfHashes(directory, algorithm, encoding);
-  fs.writeFileSync(
-    "src/serverSide/__JSON_SHA1__.json",
-    JSON.stringify(obj, false, 2)
-  );
+  const fileName = "src/serverSide/__JSON_SHA1__.json";
+  fs.writeFileSync(fileName, JSON.stringify(obj, false, 2));
 };
