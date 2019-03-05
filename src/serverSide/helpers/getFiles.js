@@ -63,11 +63,27 @@ function searchFlatten(base, targetDir) {
 function separator(base, targetDir) {
   const obj = require("../__json_sha1__.json");
   const properties = Object.getOwnPropertyNames(obj);
+  const o = {};
   properties.map(elem => {
     const dist = path.join(__dirname, "../../../dist");
     const innerDir = path.relative(dist, elem);
-    console.log(innerDir.split(path.sep));
+    const f = arr => {
+      const lastElem = arr.pop();
+      if (arr.length > 0) {
+        const q = arr.reduce(elem => {
+          const a = (o[elem] = o[elem] || {});
+          console.log(a, o);
+          return a;
+        }, o);
+        q.files = q.files || [];
+      } else {
+        // o.files = o.files || [];
+        // o.files.push(lastElem);
+      }
+    };
+    f(innerDir.split(path.sep));
   });
+  fs.writeFileSync("qwerty.js", JSON.stringify(o, false, 2));
   // const separator = innerSeparator(obj);
   // injectJson(separator, targetDir);
 }
