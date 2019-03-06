@@ -5,8 +5,19 @@
     <title></title>
   </head>
   <body>
-    helloe
     <div id="root"></div>
     <script type="text/javascript" src="testR.js"></script>
+    <script>
+      var exampleSocket = new WebSocket("ws://127.0.0.1:3001/wpw");
+      exampleSocket.onopen = function(event) {
+        alert(event);
+        exampleSocket.send(
+          "Here's some text that the server is urgently awaiting!"
+        );
+      };
+      exampleSocket.onmessage = function(m) {
+        alert(m);
+      };
+    </script>
   </body>
 </html>
