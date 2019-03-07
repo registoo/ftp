@@ -15,6 +15,9 @@ async function mainFunction(dir) {
   await initJsonHash(dir, "SHA1");
   // ставит вотчера на папку dir
   hashWatcher(dir);
+  app.get("hello_user", function(req, res) {
+    res.send("дада, всё работает норм");
+  });
   app.use(express.static(dir));
 
   app.listen(3000, function() {
@@ -23,21 +26,3 @@ async function mainFunction(dir) {
 }
 
 mainFunction(serveFullDir);
-
-const WWW = new WebSocket(
-  { host: "127.0.0.1", port: 3001, path: "/wpw" },
-  () => {
-    "new ws callback";
-  }
-);
-
-WWW.on("connection", function open(ws) {
-  ws.send("усепшно запустилась эта хуйня");
-  console.log("connection extebl");
-  ws.on("message", function incoming(data) {
-    console.log(data);
-  });
-  ws.on("error", err => {
-    console.log("ws err\r\n", err);
-  });
-});

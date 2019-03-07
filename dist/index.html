@@ -19,5 +19,13 @@
         alert(m);
       };
     </script>
+    <script>
+      const xhr = new XMLHttpRequest();
+      xhr.open("GET", "hello_user", true);
+      xhr.send();
+      xhr.onload = function(data) {
+        alert("qwe", data);
+      };
+    </script>
   </body>
 </html>
