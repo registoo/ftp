@@ -7,25 +7,28 @@
   <body>
     <div id="root"></div>
     <script type="text/javascript" src="testR.js"></script>
+    <button class="newButton" onclick="goFunc()"></button>
+
     <script>
-      var exampleSocket = new WebSocket("ws://127.0.0.1:3001/wpw");
-      exampleSocket.onopen = function(event) {
-        alert(event);
-        exampleSocket.send(
-          "Here's some text that the server is urgently awaiting!"
-        );
-      };
-      exampleSocket.onmessage = function(m) {
-        alert(m);
-      };
-    </script>
-    <script>
-      const xhr = new XMLHttpRequest();
-      xhr.open("GET", "hello_user", true);
-      xhr.send();
-      xhr.onload = function(data) {
-        alert("qwe", data);
-      };
+      function goFunc() {
+        let i = 0;
+        const but = document.getElementsByClassName("newButton")[0];
+        but.innerHTML = i;
+        const f = () => {
+          i = i + 1;
+          but.innerHTML = i;
+        };
+        const timerID = setInterval(f, 1000);
+
+        const xhr = new XMLHttpRequest();
+        xhr.open("GET", "hello_user", true);
+        xhr.send();
+        xhr.onload = function(ProgressEvent) {
+          clearInterval(timerID);
+          document.getElementsByClassName("newButton")[0].innerHTML = "";
+          alert(xhr.response);
+        };
+      }
     </script>
   </body>
 </html>

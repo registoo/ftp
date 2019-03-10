@@ -5,6 +5,7 @@ const path = require("path");
 const hashWatcher = require("./src/serverSide/hashWatcher");
 const initJsonHash = require("./src/serverside/initJsonHash");
 const WebSocket = require("ws").Server;
+const JSONchange = require("./src/serverSide/JSONchangeEmitter");
 
 const serveDir = "dist";
 // делает абсолютный путь к папке
@@ -15,14 +16,31 @@ async function mainFunction(dir) {
   await initJsonHash(dir, "SHA1");
   // ставит вотчера на папку dir
   hashWatcher(dir);
-  app.get("hello_user", function(req, res) {
-    res.send("дада, всё работает норм");
-  });
-  app.use(express.static(dir));
-
-  app.listen(3000, function() {
-    console.log("Example app listening on port 3000!");
-  });
 }
 
 mainFunction(serveFullDir);
+app.get("/hello_user", function(req, res) {
+  // JSONchange.on("change", e => {
+  JSONchange.once("change", e => {
+    console.log(req ? true : false);
+
+    res.setHeader("Content-Type", "text/plain;charset=utf-8");
+    res.setHeader("Cache-Control", "no-cache, must-revalidate");
+    res.send("qwe");
+    res.end();
+  });
+  // setTimeout(() => {
+  //   res.send("всё работет на отличненько: ");
+  // }, 2000);
+
+  // });
+  try {
+  } catch (err) {
+    console.log(err);
+  }
+});
+app.use(express.static(serveFullDir));
+
+app.listen(3000, function() {
+  console.log("Example app listening on port 3000!");
+});
