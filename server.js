@@ -20,25 +20,24 @@ async function mainFunction(dir) {
 
 mainFunction(serveFullDir);
 app.get("/hello_user", function(req, res) {
-  // JSONchange.on("change", e => {
-  JSONchange.once("change", e => {
-    console.log(req ? true : false);
+  console.log("run");
+});
 
+JSONchange.on("change", e => {
+  setTimeout(() => {
     res.setHeader("Content-Type", "text/plain;charset=utf-8");
     res.setHeader("Cache-Control", "no-cache, must-revalidate");
     res.send("qwe");
     res.end();
-  });
-  // setTimeout(() => {
-  //   res.send("всё работет на отличненько: ");
-  // }, 2000);
-
-  // });
-  try {
-  } catch (err) {
-    console.log(err);
-  }
+    return;
+  }, 3000);
 });
+
+try {
+} catch (err) {
+  console.log(err);
+}
+
 app.use(express.static(serveFullDir));
 
 app.listen(3000, function() {

@@ -4,12 +4,15 @@ const getHash = require("./helpers/getHash");
 const util = require("util");
 const EventEmitter = require("events");
 const JSONchange = require("./JSONchangeEmitter");
+const WpEntryPoint = require("../../constants.js")
+  .singleWebpackEntryPointFullPath;
+
 class FileChangeEmitter extends EventEmitter {}
 
 const fileChange = new FileChangeEmitter();
 // base - корневая директория с файлами
 // (чтобы добавлять относительную ссылку на файл)
-fileChange.on("fileIsChange", base => {
+fileChange.on("fileIsChange", (file, base) => {
   const fullJSONSHA1_promise = util.promisify(fs.readFile);
   fullJSONSHA1_promise("./src/serverSide/__json_sha1__.json", "utf8")
     .then(fullJSONSHA1 => {
@@ -37,18 +40,28 @@ fileChange.on("fileIsChange", base => {
         // разбивает строку на папки для удобного добавления в objForWrite
         f(innerDir.split(path.sep));
       });
-      try {
-        fs.writeFileSync(
-          "src/clientSide/files.json",
-          JSON.stringify(objForWrite, false, 2)
-        );
-      } catch (err) {
-        console.log(
-          `Ошибка в колбеке hashWatcher/fullJSONSHA1_promise/fs.writeFile:\r\n${err}`
-        );
-        return;
-      }
-      JSONchange.emit("change", 123);
+      fs.writeFile(
+        "src/clientSide/files.json",
+        JSON.stringify(objForWrite, false, 2),
+        err => {
+          if (err) {
+            console.log(
+              `Ошибка в колбеке hashWatcher/fullJSONSHA1_promise/fs.writeFile:\r\n${err}`
+            );
+            return;
+          }
+          // эмитирование эвента для передачи обновлённого JSON на фронт
+          getHash(WpEntryPoint).then(d => {
+            if (
+              file === WpEntryPoint &&
+              // da39a3ee5e6b4b0d3255bfef95601890afd80709 - хэш пустого файла
+              d != "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+            ) {
+              console.log(`>>>file: ${file}\r\n>>>hash: ${d}`);
+            }
+          });
+        }
+      );
     })
     .catch(error => {
       console.log(`Ошибка в hashWatcher.js/fileChange: ${error}`);
@@ -70,14 +83,14 @@ function writeFile(JsonOfHashes, file, ENOENT, serveDir) {
           }`
         );
         // вызывается перезапись для фронтэнд файла files.json
-        fileChange.emit("fileIsChange", serveDir);
+        fileChange.emit("fileIsChange", file, serveDir);
         return;
       }
       console.log(
         `\r\nФайл \"${file}\" был изменён, \r\nхэш: ${JsonOfHashes[file]}`
       );
       // вызывается перезапись для фронтэнд файла files.json
-      fileChange.emit("fileIsChange", serveDir);
+      fileChange.emit("fileIsChange", file, serveDir);
     });
   } catch (err) {
     console.log(`>>> Какая-то ошибка в hashWatcher.js/writeFile.\r\n${err}`);

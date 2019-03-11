@@ -1,13 +1,14 @@
 const path = require("path");
-
+const singleEntryPoint = require("./constants.js").singleWebpackEntryPoint;
+const entryOutputDir = require("./constants.js").singleWebpackEntryPointDir;
 module.exports = (env, options) => {
   const NODE_ENV = options.mode;
   return {
     entry: {
-      testR: "./src/test.js"
+      [singleEntryPoint]: "./src/test.js"
     },
     output: {
-      path: path.resolve(__dirname, "dist"),
+      path: entryOutputDir,
       filename: "[name].js",
       publicPath: "/",
       library: "[name]"
