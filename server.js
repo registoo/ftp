@@ -21,16 +21,13 @@ async function mainFunction(dir) {
 mainFunction(serveFullDir);
 app.get("/hello_user", function(req, res) {
   console.log("run");
-});
+  JSONchange.on("change", e => {
+    if (e) console.log(`JSONchange error:\r\nconsole.log(e)`);
 
-JSONchange.on("change", e => {
-  setTimeout(() => {
-    res.setHeader("Content-Type", "text/plain;charset=utf-8");
-    res.setHeader("Cache-Control", "no-cache, must-revalidate");
-    res.send("qwe");
-    res.end();
+    // res.send("qwe");
+    // res.end();
     return;
-  }, 3000);
+  });
 });
 
 try {

@@ -51,13 +51,14 @@ fileChange.on("fileIsChange", (file, base) => {
             return;
           }
           // эмитирование эвента для передачи обновлённого JSON на фронт
-          getHash(WpEntryPoint).then(d => {
+          getHash(WpEntryPoint).then(hash => {
             if (
               file === WpEntryPoint &&
               // da39a3ee5e6b4b0d3255bfef95601890afd80709 - хэш пустого файла
-              d != "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+              hash != "da39a3ee5e6b4b0d3255bfef95601890afd80709"
             ) {
-              console.log(`>>>file: ${file}\r\n>>>hash: ${d}`);
+              console.log(`>>>file: ${file}\r\n>>>hash: ${hash}`);
+              JSONchange.emit("change");
             }
           });
         }
