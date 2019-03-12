@@ -20,7 +20,14 @@
         };
         const timerID = setInterval(f, 1000);
 
-        fetch("/hello_user", { method: "GET" })
+        fetch("http://localhost:3000/hello_user", {
+          method: "POST",
+          headers: {
+            Accept: "text/plain",
+            "Content-Type": "text/html;charset=utf-8"
+          },
+          body: "YOLO"
+        })
           .then(elem => elem.text())
           .then(data => alert(data));
       }
