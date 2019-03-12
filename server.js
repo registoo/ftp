@@ -20,7 +20,8 @@ async function mainFunction(dir) {
 
 mainFunction(serveFullDir);
 app.get("/hello_user", function(req, res) {
-  console.log("run");
+  res.send("qwe");
+
   JSONchange.on("change", e => {
     if (e) console.log(`JSONchange error:\r\nconsole.log(e)`);
 

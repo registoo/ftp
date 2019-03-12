@@ -20,14 +20,9 @@
         };
         const timerID = setInterval(f, 1000);
 
-        const xhr = new XMLHttpRequest();
-        xhr.open("GET", "hello_user", true);
-        xhr.send();
-        xhr.onload = function(ProgressEvent) {
-          clearInterval(timerID);
-          document.getElementsByClassName("newButton")[0].innerHTML = "";
-          alert(xhr.response);
-        };
+        fetch("/hello_user", { method: "GET" })
+          .then(elem => elem.text())
+          .then(data => alert(data));
       }
     </script>
   </body>
