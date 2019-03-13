@@ -6,7 +6,7 @@ const hashWatcher = require("./src/serverSide/hashWatcher");
 const initJsonHash = require("./src/serverside/initJsonHash");
 const WebSocket = require("ws").Server;
 const JSONchange = require("./src/serverSide/JSONchangeEmitter");
-// const bodyParser = require("body-parser");
+const bodyParser = require("body-parser");
 
 const serveDir = "dist";
 // делает абсолютный путь к папке
@@ -20,11 +20,10 @@ async function mainFunction(dir) {
 }
 
 mainFunction(serveFullDir);
-const bodyParser = require("body-parser");
-var textParser = bodyParser.text({ type: "text/html" });
+const textParser = bodyParser.text({ type: "plaint/text" });
 
-app.post("/hello_user", function(req, res) {
-  console.log(req.query.variable);
+app.post("/checkfronthash", textParser, function(req, res) {
+  console.log(req.body);
   res.send("qwe");
 
   JSONchange.on("change", e => {

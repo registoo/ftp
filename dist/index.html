@@ -20,11 +20,11 @@
         };
         const timerID = setInterval(f, 1000);
 
-        fetch("http://localhost:3000/hello_user", {
+        fetch("http://localhost:3000/checkfronthash", {
           method: "POST",
           headers: {
             Accept: "text/plain",
-            "Content-Type": "text/html;charset=utf-8"
+            "Content-Type": "plain/text;charset=utf-8"
           },
           body: "YOLO"
         })
