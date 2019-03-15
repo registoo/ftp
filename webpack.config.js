@@ -1,11 +1,14 @@
 const path = require("path");
 const singleEntryPoint = require("./constants.js").singleWebpackEntryPoint;
 const entryOutputDir = require("./constants.js").singleWebpackEntryPointDir;
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+
 module.exports = (env, options) => {
   const NODE_ENV = options.mode;
   return {
     entry: {
-      [singleEntryPoint]: "./src/test.js"
+      [singleEntryPoint]: "./src/test.js",
+      secondPoint: "./src/qwe/webpackTest.js"
     },
     output: {
       path: entryOutputDir,
@@ -23,6 +26,11 @@ module.exports = (env, options) => {
       ignored: /node_modules/,
       poll: 1000
     },
+    plugins: [
+      new HtmlWebpackPlugin({
+        template: "./src/clientSide/index.html"
+      })
+    ],
     module: {
       rules: [
         {
