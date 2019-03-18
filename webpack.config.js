@@ -7,8 +7,7 @@ module.exports = (env, options) => {
   const NODE_ENV = options.mode;
   return {
     entry: {
-      [singleEntryPoint]: "./src/test.js",
-      secondPoint: "./src/qwe/webpackTest.js"
+      [singleEntryPoint]: "./src/test.js"
     },
     output: {
       path: entryOutputDir,
