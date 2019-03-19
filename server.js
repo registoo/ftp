@@ -7,7 +7,7 @@ const initJsonHash = require("./src/serverside/initJsonHash");
 const WebSocket = require("ws").Server;
 const JSONchange = require("./src/serverSide/JSONchangeEmitter");
 const bodyParser = require("body-parser");
-var Datastore = require("nedb");
+const neDB = require("./src/serverSide/dataBase.js");
 
 const serveDir = "dist";
 // делает абсолютный путь к папке
@@ -18,13 +18,7 @@ async function mainFunction(dir) {
   await initJsonHash(dir, "SHA1");
   // ставит вотчера на папку dir
   hashWatcher(dir);
-  var db = new Datastore({ filename: "users.db" });
-  db.loadDatabase();
-  // db.insert({ name: "Boris the Blade", year: 1946 });
-  db.update({ year: 1946 }, { name: "Doug the Head", year: 1940 }, {});
-  db.find({ year: 1946 }, function(err, docs) {
-    console.log(docs);
-  });
+  neDB();
 }
 
 mainFunction(serveFullDir);
