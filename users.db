@@ -1,18 +1,7 @@
-{"tet":"test","_id":"0mZLjP3jsmS5Apvo"}
-{"system":"solar","puk":"puk","_id":"2iHWiP5Be8QX4igg"}
-{"system":"solar","puk":"puk","_id":"907yGqGQGzZI1HWY"}
-{"system":"solar","puk":"puk","_id":"CQRPPT0OlzMCKluJ"}
-{"system":"solar","puk":"puk","_id":"MzxUATrXCgHjJcwp"}
-{"system":"solar","puk":"puk","_id":"NvUOL3c7qmZscmQF"}
-{"system":"solar","puk":"puk","_id":"YuMMm87HgMR0gb8w"}
-{"tet":"test","_id":"bVBPRFS2U7Q1yaha"}
-{"system":"solar","puk":"puk","_id":"blcekIA2xOgSdSgo"}
-{"system":"solar","puk":"puk","_id":"cZiF75qpp9jBJO5a"}
-{"system":"solar","puk":"puk","_id":"h5RpFSkyLZVqnlEM"}
-{"_id":"id1","planet":"Mars","system":"solar","inhabited":false,"satellites":["Phobos","Deimos"]}
-{"system":"solar","_id":"id5","completeData":{"planets":[{"name":"Earth","number":3},{"name":"Mars","number":2},{"name":"Pluton","number":9}]}}
-{"system":"solar","puk":"puk","_id":"m0imvqzT8LmngV6N"}
-{"system":"moon","puk":"puk","_id":"n0FKgURfglyNUnUM","humans":{"genders":2,"eyes":true}}
-{"system":"solar","puk":"puk","_id":"ozv59psnkAyGciKn"}
-{"system":"solar","puk":"puk","_id":"pmLCMWmCyumQfG2X"}
-{"system":"solar","puk":"puk","_id":"oOuxlR1GsDr0yvap"}
+{"_id":"id1","planet":"Mars","system":"solnezcnaya system","inhabited":false,"satellites":["Phobos","Deimos"]}
+{"_id":"id2","planet":"Earth","system":"solnezcnaya system","inhabited":true,"humans":{"genders":2,"eyes":true}}
+{"_id":"id3","planet":"Jupiter","system":"solnezcnaya system","inhabited":false}
+{"_id":"id4","planet":"Omicron Persei 8","system":"futurama","inhabited":true,"humans":{"genders":7}}
+{"system":"solnezcnaya system","_id":"id5","completeData":{"planets":[{"name":"Earth","number":3},{"name":"Mars","number":2},{"name":"Pluton","number":9}]}}
+{"system":"solnezcnaya system","_id":"id6","completeData":{"planets":[{"name":"Earth","number":5},{"name":"Mars","number":7},{"name":"Pluton","number":1}]}}
+{"system":"solnezcnaya system","_id":"id7","completeData":{"planets":[{"name":"Earth","number":1},{"name":"Mars","number":5}]}}
