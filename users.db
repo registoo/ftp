@@ -1,7 +1,0 @@
-{"_id":"id1","planet":"Mars","system":"solnezcnaya system","inhabited":false,"satellites":["Phobos","Deimos"]}
-{"_id":"id2","planet":"Earth","system":"solnezcnaya system","inhabited":true,"humans":{"genders":2,"eyes":true}}
-{"_id":"id3","planet":"Jupiter","system":"solnezcnaya system","inhabited":false}
-{"_id":"id4","planet":"Omicron Persei 8","system":"futurama","inhabited":true,"humans":{"genders":7}}
-{"system":"solnezcnaya system","_id":"id5","completeData":{"planets":[{"name":"Earth","number":3},{"name":"Mars","number":2},{"name":"Pluton","number":9}]}}
-{"system":"solnezcnaya system","_id":"id6","completeData":{"planets":[{"name":"Earth","number":5},{"name":"Mars","number":7},{"name":"Pluton","number":1}]}}
-{"system":"solnezcnaya system","_id":"id7","completeData":{"planets":[{"name":"Earth","number":1},{"name":"Mars","number":5}]}}

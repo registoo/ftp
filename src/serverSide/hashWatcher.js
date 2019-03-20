@@ -6,6 +6,7 @@ const EventEmitter = require("events");
 const JSONchange = require("./JSONchangeEmitter");
 const WpEntryPoint = require("../../constants.js")
   .singleWebpackEntryPointFullPath;
+const entryFileDB = require("../../constants.js").filesSHA1;
 
 class FileChangeEmitter extends EventEmitter {}
 

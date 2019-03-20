@@ -1,19 +1,10 @@
 const Datastore = require("nedb");
+const entryFileDB = require("../../constants.js").filesSHA1;
+const path = require("path");
 
-const db = new Datastore({ filename: "users.db" });
+const fileName = path.join("./src/serverSide/", entryFileDB);
+const db = new Datastore({ filename: fileName });
 
-const f = () => {
-  db.loadDatabase();
-  db.update(
-    { system: "solnezcnaya system" },
-    { $unset: { planet: true } },
-    { multi: true },
-    function(err, docs) {
-      if (err) console.log("error DB: ", err);
-      console.dir(docs, { depth: null });
-    }
-  );
-  db.find().exec((err, d) => console.log(d));
-};
+db.loadDatabase();
 
-module.exports = f;
+module.exports = db;
