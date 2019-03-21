@@ -28,11 +28,12 @@ module.exports = async function(directory, algorithm, encoding) {
   neDB.remove(
     { fileName: { $exists: true }, hash: { $exists: true } },
     { multi: true },
-    (err, q) => {
+    function(err, q) {
       if (err) {
-        console.log(`При очищении базы neDB возникла ошика: ${err}`);
+        console.log(`При очищении базы neDB возникла ошибка: ${err}`);
         return;
       }
+      console.log(q);
       for (f in obj) {
         neDB.insert({ fileName: f, hash: obj[f] });
       }
