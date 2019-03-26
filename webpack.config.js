@@ -8,7 +8,6 @@ module.exports = (env, options) => {
   return {
     entry: {
       [singleEntryPoint]: "./src/test.js",
-      secondPoint: "./src/qwe/webpackTest.js"
     },
     output: {
       path: entryOutputDir,
