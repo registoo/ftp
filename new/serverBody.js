@@ -1,16 +1,20 @@
 const path = require('path');
 const readDirAsync = require('../src/serverSide/helpers/readDirAsync');
 const isFile = require('../src/serverSide/helpers/isFile.js');
-const filesJSON = require('./files.json');
+const filesJSON = require('./fi.json');
 const fs = require('fs');
-async function f(filePath) {
+async function f(filePath, foldersObj) {
   try {
     const arr = await readDirAsync(filePath);
-    arr.map(async function(i) {
+    await asyncMap(arr, async function(i) {
       const fullFilePath = path.join(filePath, i);
-      (await isFile(fullFilePath))
-        ? filesJSON[filePath].push(i)
-        : await f(path.join(filePath, i));
+      if (await isFile(fullFilePath)) {
+        foldersObj.files.push(fullFilePath);
+        console.dir(filesJSON, { depth: null });
+      } else {
+        foldersObj.folders[fullFilePath] = { files: [], folders: {} };
+        f(fullFilePath, foldersObj.folders[fullFilePath]);
+      }
     });
   } catch (err) {
     console.log(err);
@@ -18,41 +22,38 @@ async function f(filePath) {
 }
 
 async function ff(filePath) {
-  filesJSON['/'] = [];
+  filesJSON['/'] = { files: [], folders: {} };
   try {
     const firstArr = await readDirAsync(filePath);
-    firstArr.map(
-      await async function s(i) {
-        if (await isFile(i)) {
-          filesJSON['/'].push(i);
+    const results = await asyncMap(
+      firstArr,
+      await async function(i) {
+        const currentFilePath = path.join(filePath, i);
+        if (await isFile(currentFilePath)) {
+          filesJSON['/'].files.push(currentFilePath);
         } else {
-          const currentFilePath = path.join(filePath, i);
-          filesJSON['/'][currentFilePath];
-          await f(currentFilePath);
+          filesJSON['/'].folders[currentFilePath] = { files: [], folders: {} };
+          await f(currentFilePath, filesJSON['/'].folders[currentFilePath]);
         }
       }
     );
+    Promise.all(results).then(() => {
+      const J = JSON.stringify(filesJSON);
+      console.dir(filesJSON, { depth: null });
+
+      fs.writeFile(path.join(__dirname, 'fi.json'), J, 'utf8', () => {
+        console.log('done');
+      });
+    });
   } catch (err) {
     console.log(err);
   }
 }
 
+async function asyncMap(arr, func) {
+  const lastElem = arr.pop();
+  await func(lastElem);
+  arr.length > 0 ? await asyncMap(arr, func) : console.log('done');
+}
+
 module.exports = ff;
-
-// function ff(filePath) {
-//   const httpHere = path.join(__dirname, 'fi.json');
-
-//   filesJSON.q = {
-//     id: 4,
-//     firstName: 'John',
-//     secondName: 'Forget',
-//     city: {
-//       estate: 'Alabama',
-//     },
-//   };
-//   console.log('!! ', filesJSON);
-//   const q = JSON.stringify(filesJSON);
-//   fs.writeFile(httpHere, q, 'utf8', () => {
-//     console.log('done');
-//   });
-// }

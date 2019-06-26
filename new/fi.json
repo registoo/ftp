@@ -1,1 +1,12 @@
-{"q":{"id":4,"firstName":"John","secondName":"Forget","city":{"estate":"Alabama"}}}
+{
+  "/": {
+    "files": [
+      "C:\\FTPvideo\\lion-sample.mkv",
+      "C:\\FTPvideo\\Новый текстовый документ.txt"
+    ],
+    "folders": {
+      "C:\\FTPvideo\\mkv": { "files": [], "folders": {} },
+      "C:\\FTPvideo\\mp4": { "files": [], "folders": {} }
+    }
+  }
+}
