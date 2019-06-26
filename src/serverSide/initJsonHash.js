@@ -1,9 +1,9 @@
-const fs = require("fs");
-const path = require("path");
-const readDirAsync = require("./helpers/readDirAsync.js");
-const isFile = require("./helpers/isFile.js");
-const getHash = require("./helpers/getHash.js");
-const asyncMap = require("./helpers/asyncMap.js");
+const fs = require('fs');
+const path = require('path');
+const readDirAsync = require('./helpers/readDirAsync.js');
+const isFile = require('./helpers/isFile.js');
+const getHash = require('./helpers/getHash.js');
+const asyncMap = require('./helpers/asyncMap.js');
 
 async function objOfHashes(directory, algorithm, encoding, objForJSON = {}) {
   const arrOfFiles = await readDirAsync(directory);
@@ -24,6 +24,7 @@ async function objOfHashes(directory, algorithm, encoding, objForJSON = {}) {
 
 module.exports = async function(directory, algorithm, encoding) {
   const obj = await objOfHashes(directory, algorithm, encoding);
-  const fileName = "src/serverSide/__JSON_SHA1__.json";
+  const fileName = 'dist/files.json';
+  // const fileName = 'src/serverSide/__JSON_SHA1__.json';
   fs.writeFileSync(fileName, JSON.stringify(obj, false, 2));
 };
