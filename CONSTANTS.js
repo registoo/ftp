@@ -1,7 +1,7 @@
 const path = require('path');
 
 // frontend
-const singleEntryPoint = 'testR';
+const singleEntryPoint = 'indexReactJS';
 const singleEntryPointDir = path.join(__dirname, 'dist');
 const singleEntryPointFullPath = path.join(
   singleEntryPointDir,
