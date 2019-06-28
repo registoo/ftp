@@ -1,4 +1,3 @@
-const _ = require('lodash');
 const path = require('path');
 const React = require('react');
 const { render } = require('react-dom');
@@ -7,8 +6,9 @@ const videojs = require('video.js');
 module.exports = (pathName, fileName) => {
   const splitSlash = 'files/' + pathName.substring(12);
 
-  const extAll = _.split(fileName, '.');
+  const extAll = fileName.split('.');
   const ext = extAll[extAll.length - 1];
+  console.log('extAll: ', extAll, '\r\next: ', ext);
   switch (ext) {
     case 'mp4':
       return (

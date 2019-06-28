@@ -3,20 +3,43 @@ const readDirAsync = require('../src/serverSide/helpers/readDirAsync');
 const isFile = require('../src/serverSide/helpers/isFile.js');
 const filesJSON = require('./ftpFiles.json');
 const fs = require('fs');
+
+addToArray = (arr, ...rest) =>
+  rest.forEach(elem => {
+    arr.push(elem);
+  });
+const getResultArrayOfFileData = (filePath, i) => {
+  const fullFilePath = path.join(filePath, i);
+  const getSeparatedPath = fullFilePath.split(path.sep);
+  const relativeFilePath = getSeparatedPath.slice(2).join('/');
+  const getFileExtension = getSeparatedPath[getSeparatedPath.length - 1].split(
+    '.'
+  );
+  const fileExtension = getFileExtension[getFileExtension.length - 1];
+  const arrayOfFileData = [];
+  addToArray(arrayOfFileData, fullFilePath, relativeFilePath, fileExtension);
+  return arrayOfFileData;
+};
+
 async function f(filePath, foldersObj) {
   try {
     const arr = await readDirAsync(filePath);
     await asyncMap(arr, async function(i) {
-      const fullFilePath = path.join(filePath, i);
-      if (await isFile(fullFilePath)) {
-        foldersObj.files.push(fullFilePath);
+      const arrayOfFileData = getResultArrayOfFileData(filePath, i);
+      const currentFilePath = arrayOfFileData[0];
+
+      if (await isFile(currentFilePath)) {
+        foldersObj.files.push(arrayOfFileData);
         const J = JSON.stringify(filesJSON);
-        fs.writeFile(path.join(__dirname, 'ftpFiles.json'), J, 'utf8', () => {
-          console.log('done');
-        });
+        fs.writeFile(
+          path.join(__dirname, 'ftpFiles.json'),
+          J,
+          'utf8',
+          () => {}
+        );
       } else {
-        foldersObj.folders[fullFilePath] = { files: [], folders: {} };
-        f(fullFilePath, foldersObj.folders[fullFilePath]);
+        foldersObj.folders[currentFilePath] = { files: [], folders: {} };
+        f(currentFilePath, foldersObj.folders[currentFilePath]);
       }
     });
   } catch (err) {
@@ -31,13 +54,17 @@ async function ff(filePath) {
     const results = await asyncMap(
       firstArr,
       await async function(i) {
-        const currentFilePath = path.join(filePath, i);
+        const arrayOfFileData = getResultArrayOfFileData(filePath, i);
+        const currentFilePath = arrayOfFileData[0];
         if (await isFile(currentFilePath)) {
-          filesJSON['/'].files.push(currentFilePath);
+          filesJSON['/'].files.push(arrayOfFileData);
           const J = JSON.stringify(filesJSON);
-          fs.writeFile(path.join(__dirname, 'ftpFiles.json'), J, 'utf8', () => {
-            console.log('done');
-          });
+          fs.writeFile(
+            path.join(__dirname, 'ftpFiles.json'),
+            J,
+            'utf8',
+            () => {}
+          );
         } else {
           filesJSON['/'].folders[currentFilePath] = { files: [], folders: {} };
           await f(currentFilePath, filesJSON['/'].folders[currentFilePath]);
