@@ -7,7 +7,7 @@ module.exports = (env, options) => {
   const NODE_ENV = options.mode;
   return {
     entry: {
-      [singleEntryPoint]: './new/reactIndex.js',
+      [singleEntryPoint]: './new/clientSide/js/reactIndex.js',
     },
     output: {
       path: entryOutputDir,
@@ -27,7 +27,7 @@ module.exports = (env, options) => {
     },
     plugins: [
       new HtmlWebpackPlugin({
-        template: './src/clientSide/index.html',
+        template: './new/clientSide/index.html',
       }),
     ],
     module: {

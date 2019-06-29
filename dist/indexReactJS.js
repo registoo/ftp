@@ -82,48 +82,138 @@ var indexReactJS =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./new/reactIndex.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./new/clientSide/js/reactIndex.js");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./new/ftpFiles.json":
-/*!***************************!*\
-  !*** ./new/ftpFiles.json ***!
-  \***************************/
+/***/ "./new/clientSide/ftpFiles.json":
+/*!**************************************!*\
+  !*** ./new/clientSide/ftpFiles.json ***!
+  \**************************************/
 /*! exports provided: /, default */
 /***/ (function(module) {
 
-module.exports = {"/":{"files":["C:\\FTPvideo\\Новый текстовый документ.txt","C:\\FTPvideo\\mov_bbb.mp4","C:\\FTPvideo\\lion-sample.mkv"],"folders":{"C:\\FTPvideo\\mp4":{"files":["C:\\FTPvideo\\mp4\\mov_bbb.mp4"],"folders":{"C:\\FTPvideo\\mp4\\Папка второй уровень":{"files":["C:\\FTPvideo\\mp4\\Папка второй уровень\\xs.расширение"],"folders":{}}}},"C:\\FTPvideo\\mkv":{"files":["C:\\FTPvideo\\mkv\\lion-sample.mkv","C:\\FTPvideo\\mkv\\lion-sample — копия.mkv","C:\\FTPvideo\\mkv\\lion-sample — копия (3).mkv","C:\\FTPvideo\\mkv\\lion-sample — копия (2).mkv"],"folders":{"C:\\FTPvideo\\mkv\\Папка_второй_уровень":{"files":["C:\\FTPvideo\\mkv\\Папка_второй_уровень\\Новый текстовый документ.txt"],"folders":{}}}}}}};
+module.exports = {"/":{"files":[{"rootPath":"X:/FTPvideo","relativeFilePath":"123.txt","fileName":"123","ext":".txt"}],"folders":{"X:\\FTPvideo\\Год культуры":{"files":[{"rootPath":"X:/FTPvideo","relativeFilePath":"Год культуры/God.Kultury.E20.mp4","fileName":"God.Kultury.E20","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Год культуры/God.Kultury.E19.mp4","fileName":"God.Kultury.E19","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Год культуры/God.Kultury.E18.mp4","fileName":"God.Kultury.E18","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Год культуры/God.Kultury.E17.mp4","fileName":"God.Kultury.E17","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Год культуры/God.Kultury.E16.mp4","fileName":"God.Kultury.E16","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Год культуры/God.Kultury.E15.mp4","fileName":"God.Kultury.E15","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Год культуры/God.Kultury.E14.mp4","fileName":"God.Kultury.E14","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Год культуры/God.Kultury.E13.mp4","fileName":"God.Kultury.E13","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Год культуры/God.Kultury.E12.mp4","fileName":"God.Kultury.E12","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Год культуры/God.Kultury.E11.mp4","fileName":"God.Kultury.E11","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Год культуры/God.Kultury.E10.mp4","fileName":"God.Kultury.E10","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Год культуры/God.Kultury.E09.mp4","fileName":"God.Kultury.E09","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Год культуры/God.Kultury.E08.mp4","fileName":"God.Kultury.E08","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Год культуры/God.Kultury.E07.mp4","fileName":"God.Kultury.E07","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Год культуры/God.Kultury.E06.mp4","fileName":"God.Kultury.E06","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Год культуры/God.Kultury.E05.mp4","fileName":"God.Kultury.E05","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Год культуры/God.Kultury.E04.mp4","fileName":"God.Kultury.E04","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Год культуры/God.Kultury.E03.mp4","fileName":"God.Kultury.E03","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Год культуры/God.Kultury.E02.mp4","fileName":"God.Kultury.E02","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Год культуры/God.Kultury.E01.mp4","fileName":"God.Kultury.E01","ext":".mp4"}],"folders":{"X:\\FTPvideo\\Год культуры\\Новая папка":{"files":[],"folders":{"X:\\FTPvideo\\Год культуры\\Новая папка\\Новая папка":{"files":[],"folders":{},"relativePath":"Год культуры/Новая папка/Новая папка"}},"relativePath":"Год культуры/Новая папка"}},"relativePath":"Год культуры"},"X:\\FTPvideo\\Rick and Morty":{"files":[],"folders":{"X:\\FTPvideo\\Rick and Morty\\3 season":{"files":[{"rootPath":"X:/FTPvideo","relativeFilePath":"Rick and Morty/3 season/10 - Рикчжурский Мортидат.mp4","fileName":"10 - Рикчжурский Мортидат","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Rick and Morty/3 season/09 - Азбука Бет.mp4","fileName":"09 - Азбука Бет","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Rick and Morty/3 season/08 - Проветренный мозг Морти.mp4","fileName":"08 - Проветренный мозг Морти","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Rick and Morty/3 season/07 - Риклантидическая путаница.mp4","fileName":"07 - Риклантидическая путаница","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Rick and Morty/3 season/06 - Отдых и Риклаксация.mp4","fileName":"06 - Отдых и Риклаксация","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Rick and Morty/3 season/05 - Ветреной Заговор Дёрли.mp4","fileName":"05 - Ветреной Заговор Дёрли","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Rick and Morty/3 season/04 - Поборники 3. Возвращение в Подземелье.mp4","fileName":"04 - Поборники 3. Возвращение в Подземелье","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Rick and Morty/3 season/03 - Маринованный Рик.mp4","fileName":"03 - Маринованный Рик","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Rick and Morty/3 season/02 - Рикман с камнем.mp4","fileName":"02 - Рикман с камнем","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Rick and Morty/3 season/01 - Побег из Рикшенка.mp4","fileName":"01 - Побег из Рикшенка","ext":".mp4"}],"folders":{},"relativePath":"Rick and Morty/3 season"},"X:\\FTPvideo\\Rick and Morty\\2 season":{"files":[{"rootPath":"X:/FTPvideo","relativeFilePath":"Rick and Morty/2 season/10 - Свадебные Сквончеры.mp4","fileName":"10 - Свадебные Сквончеры","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Rick and Morty/2 season/09 - Судная Ночь.mp4","fileName":"09 - Судная Ночь","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Rick and Morty/2 season/08 - Межвселенский Кабель 2. Искушение Судьбы.mp4","fileName":"08 - Межвселенский Кабель 2. Искушение Судьбы","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Rick and Morty/2 season/07 - Большой переполох в маленьком Санчезе.mp4","fileName":"07 - Большой переполох в маленьком Санчезе","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Rick and Morty/2 season/06 - Наверное, Рики сошли с ума.mp4","fileName":"06 - Наверное, Рики сошли с ума","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Rick and Morty/2 season/05 - Пора Швифтануться.mp4","fileName":"05 - Пора Швифтануться","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Rick and Morty/2 season/04 - Вспомнить Вэ Сэ Йо.mp4","fileName":"04 - Вспомнить Вэ Сэ Йо","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Rick and Morty/2 season/03 - Аутоэротическая ассимиляция.mp4","fileName":"03 - Аутоэротическая ассимиляция","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Rick and Morty/2 season/02 - Успеть до Морти-ночи.mp4","fileName":"02 - Успеть до Морти-ночи","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Rick and Morty/2 season/01 - Рик во времени.mp4","fileName":"01 - Рик во времени","ext":".mp4"}],"folders":{},"relativePath":"Rick and Morty/2 season"},"X:\\FTPvideo\\Rick and Morty\\1 season":{"files":[{"rootPath":"X:/FTPvideo","relativeFilePath":"Rick and Morty/1 season/11 - Риксованный бизнес.mp4","fileName":"11 - Риксованный бизнес","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Rick and Morty/1 season/10 - Близкие риконтакты риковой степени.mp4","fileName":"10 - Близкие риконтакты риковой степени","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Rick and Morty/1 season/09 - Надвигается нечто риканутое.mp4","fileName":"09 - Надвигается нечто риканутое","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Rick and Morty/1 season/08 - Скандалы, Рик и расследования.mp4","fileName":"08 - Скандалы, Рик и расследования","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Rick and Morty/1 season/07 - Воспитание Газорпазорпа.mp4","fileName":"07 - Воспитание Газорпазорпа","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Rick and Morty/1 season/06 - Напиток Рика №9.mp4","fileName":"06 - Напиток Рика №9","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Rick and Morty/1 season/05 - Мисикс и разрушение.mp4","fileName":"05 - Мисикс и разрушение","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Rick and Morty/1 season/04 - М. Найт Шьямал-Инопланетяне!.mp4","fileName":"04 - М. Найт Шьямал-Инопланетяне!","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Rick and Morty/1 season/03 - Анатомический парк.mp4","fileName":"03 - Анатомический парк","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Rick and Morty/1 season/02 - Пёс-газонокосильщик.mp4","fileName":"02 - Пёс-газонокосильщик","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Rick and Morty/1 season/01 - Пилотный эпизод.mp4","fileName":"01 - Пилотный эпизод","ext":".mp4"}],"folders":{},"relativePath":"Rick and Morty/1 season"}},"relativePath":"Rick and Morty"}}}};
 
 /***/ }),
 
-/***/ "./new/reactIndex.js":
-/*!***************************!*\
-  !*** ./new/reactIndex.js ***!
-  \***************************/
+/***/ "./new/clientSide/js/isVideo.js":
+/*!**************************************!*\
+  !*** ./new/clientSide/js/isVideo.js ***!
+  \**************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
+
+var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+var videojs = __webpack_require__(/*! video.js */ "./node_modules/video.js/dist/video.es.js");
+
+module.exports = function (pathName) {
+  var fileName = pathName.fileName;
+  var splitSlash = 'files/' + pathName.relativeFilePath;
+  var ext = pathName.ext;
+
+  switch (ext) {
+    case '.mp4':
+      return React.createElement("div", {
+        className: "poop"
+      }, React.createElement("video", {
+        controls: true,
+        src: splitSlash,
+        type: "video/mp4",
+        width: "400",
+        height: "300"
+      }, "I'm sorry; your browser doesn't support HTML5 video in MP4 with H.264."), React.createElement("p", {
+        className: "naming"
+      }, fileName));
+      break;
+
+    case '.webm':
+      return React.createElement("div", {
+        className: "poop"
+      }, React.createElement("video", {
+        controls: true,
+        src: splitSlash,
+        type: "video/webm",
+        width: "400",
+        height: "300"
+      }, "I'm sorry; your browser doesn't support HTML5 video in WebM with VP8/VP9."), React.createElement("p", {
+        className: "naming"
+      }, fileName));
+      break;
+
+    default:
+      return React.createElement("a", {
+        href: splitSlash
+      }, fileName);
+  }
+};
+
+/***/ }),
+
+/***/ "./new/clientSide/js/reactIndex.js":
+/*!*****************************************!*\
+  !*** ./new/clientSide/js/reactIndex.js ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
 var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 
 var _require = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js"),
     render = _require.render;
 
-var ftpFiles = __webpack_require__(/*! ./ftpFiles.json */ "./new/ftpFiles.json")['/'];
+__webpack_require__(/*! ../mysite.sass */ "./new/clientSide/mysite.sass");
 
-var isVideo = __webpack_require__(/*! ../src/clientSide/isVideo */ "./src/clientSide/isVideo.js");
+var isVideo = __webpack_require__(/*! ./isVideo */ "./new/clientSide/js/isVideo.js");
 
-__webpack_require__(/*! ../src/clientSide/mysite.sass */ "./src/clientSide/mysite.sass");
+var ftpFiles = __webpack_require__(/*! ../ftpFiles.json */ "./new/clientSide/ftpFiles.json")['/'];
 
 function FTPfiles(props) {
   var startDir = props.startDir;
   var result = [];
+  var id = 0;
 
   if (startDir.files.length > 0) {
     result.push(React.createElement(FileElement, {
-      files: startDir.files
+      files: startDir.files,
+      key: id
     }));
+    id = id + 1;
+  }
+
+  if (Object.keys(startDir.folders).length > 0) {
+    Object.keys(startDir.folders).forEach(function (elem) {
+      result.push(React.createElement(FileDir, {
+        elemValue: startDir.folders[elem],
+        key: id,
+        elemName: startDir.folders[elem].relativePath
+      }));
+      id = id + 1;
+    });
+  }
+
+  if (!result.length) {
+    return React.createElement("div", null, "\u041F\u0443\u0441\u0442\u0430\u044F \u043F\u0430\u043F\u043A\u0430");
   }
 
   return result;
@@ -132,18 +222,115 @@ function FTPfiles(props) {
 function FileElement(props) {
   var files = props.files;
   return files.map(function (elem, id) {
-    var separatePathToArr = elem.split('\\');
-    var fileName = separatePathToArr[separatePathToArr.length - 1];
+    var fileName = elem.fileName;
     return React.createElement("div", {
       key: id,
       className: "file"
-    }, isVideo(elem, fileName));
+    }, isVideo(elem));
   });
+}
+
+var FileDir =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(FileDir, _React$Component);
+
+  function FileDir(props) {
+    var _this;
+
+    _classCallCheck(this, FileDir);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(FileDir).call(this, props));
+    _this.elemValue = _this.props.elemValue;
+    _this.elemName = _this.props.elemName;
+    _this.state = {
+      filesButton: true
+    };
+    return _this;
+  }
+
+  _createClass(FileDir, [{
+    key: "handlerButtonValue",
+    value: function handlerButtonValue() {
+      this.setState({
+        filesButton: !this.state.filesButton
+      });
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var _this2 = this;
+
+      return React.createElement("div", null, React.createElement("div", {
+        className: "directory"
+      }, this.state.filesButton ? React.createElement("span", {
+        onClick: function onClick() {
+          return _this2.handlerButtonValue();
+        }
+      }, "\u25BA") : React.createElement("span", {
+        onClick: function onClick() {
+          return _this2.handlerButtonValue();
+        }
+      }, "\u25BC"), React.createElement("span", {
+        onClick: function onClick() {
+          return _this2.handlerButtonValue();
+        }
+      }, this.elemName)), React.createElement("div", null, React.createElement(FilesFromButton, {
+        filesButton: this.state.filesButton,
+        dirObj: this.elemValue
+      })));
+    }
+  }]);
+
+  return FileDir;
+}(React.Component); //добавление содержимого папки по клику на папку
+
+
+function FilesFromButton(props) {
+  if (props.filesButton) {
+    return null;
+  }
+
+  return React.createElement("div", {
+    className: "child"
+  }, React.createElement(FTPfiles, {
+    startDir: props.dirObj
+  }));
 }
 
 render(React.createElement(FTPfiles, {
   startDir: ftpFiles
 }), document.getElementById('root'));
+
+/***/ }),
+
+/***/ "./new/clientSide/mysite.sass":
+/*!************************************!*\
+  !*** ./new/clientSide/mysite.sass ***!
+  \************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js!../../node_modules/sass-loader/lib/loader.js!./mysite.sass */ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/lib/loader.js!./new/clientSide/mysite.sass");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
 
 /***/ }),
 
@@ -773,16 +960,16 @@ var Decrypter = function () {
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/lib/loader.js!./src/clientSide/mysite.sass":
+/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/lib/loader.js!./new/clientSide/mysite.sass":
 /*!*******************************************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/lib/loader.js!./src/clientSide/mysite.sass ***!
+  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/lib/loader.js!./new/clientSide/mysite.sass ***!
   \*******************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
 // Module
-exports.push([module.i, "@font-face {\n  font-family: \"Comfortaa\";\n  src: url(\"/fonts/Comfortaa.ttf\") format(\"TrueType\"); }\n\n.child {\n  margin: 10px 0 15px 15px;\n  border-left: 5px solid rgba(41, 209, 203, 0.56);\n  padding-left: 10px; }\n\n.directory {\n  margin: 5px 0;\n  text-align: center;\n  vertical-align: middle;\n  align-items: center;\n  display: flex; }\n  .directory span, .directory div {\n    border-bottom: 1px solid black; }\n    .directory span:hover, .directory div:hover {\n      cursor: pointer; }\n\n.dirStr {\n  padding-left: 4px; }\n\n.file {\n  margin: 5px 0; }\n\n.newButton {\n  width: 40px;\n  height: 20px;\n  background-color: red; }\n\n.poop {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n  width: 900px;\n  border: 2px solid red; }\n\n.naming {\n  margin: 0;\n  padding: 0;\n  font-size: 300%;\n  font-family: Comfortaa; }\n", ""]);
+exports.push([module.i, "@font-face {\n  font-family: \"Comfortaa\";\n  src: url(\"/fonts/Comfortaa.ttf\") format(\"TrueType\"); }\n\n.child {\n  margin: 10px 0 15px 15px;\n  border-left: 5px solid rgba(41, 209, 203, 0.56);\n  padding-left: 10px; }\n\n.directory {\n  margin: 5px 0;\n  text-align: center;\n  vertical-align: middle;\n  align-items: center;\n  display: flex;\n  border-bottom: 1px solid black; }\n  .directory span, .directory div {\n    margin-right: 6px; }\n    .directory span:hover, .directory div:hover {\n      cursor: pointer; }\n\n.dirStr {\n  padding-left: 4px; }\n\n.file {\n  margin: 5px 0; }\n\n.newButton {\n  width: 40px;\n  height: 20px;\n  background-color: red; }\n\n.poop {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n  width: 900px;\n  border: 2px solid red; }\n\n.naming {\n  margin: 0;\n  padding: 0;\n  font-size: 300%;\n  font-family: Comfortaa; }\n", ""]);
 
 
 
@@ -13544,335 +13731,6 @@ module.exports = function (headers) {
 
 /***/ }),
 
-/***/ "./node_modules/path-browserify/index.js":
-/*!***********************************************!*\
-  !*** ./node_modules/path-browserify/index.js ***!
-  \***********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-/* WEBPACK VAR INJECTION */(function(process) {// .dirname, .basename, and .extname methods are extracted from Node.js v8.11.1,
-// backported and transplited with Babel, with backwards-compat fixes
-// Copyright Joyent, Inc. and other Node contributors.
-//
-// Permission is hereby granted, free of charge, to any person obtaining a
-// copy of this software and associated documentation files (the
-// "Software"), to deal in the Software without restriction, including
-// without limitation the rights to use, copy, modify, merge, publish,
-// distribute, sublicense, and/or sell copies of the Software, and to permit
-// persons to whom the Software is furnished to do so, subject to the
-// following conditions:
-//
-// The above copyright notice and this permission notice shall be included
-// in all copies or substantial portions of the Software.
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
-// OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
-// NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
-// DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
-// OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
-// USE OR OTHER DEALINGS IN THE SOFTWARE.
-// resolves . and .. elements in a path array with directory names there
-// must be no slashes, empty elements, or device names (c:\) in the array
-// (so also no leading and trailing slashes - it does not distinguish
-// relative and absolute paths)
-function normalizeArray(parts, allowAboveRoot) {
-  // if the path tries to go above the root, `up` ends up > 0
-  var up = 0;
-
-  for (var i = parts.length - 1; i >= 0; i--) {
-    var last = parts[i];
-
-    if (last === '.') {
-      parts.splice(i, 1);
-    } else if (last === '..') {
-      parts.splice(i, 1);
-      up++;
-    } else if (up) {
-      parts.splice(i, 1);
-      up--;
-    }
-  } // if the path is allowed to go above the root, restore leading ..s
-
-
-  if (allowAboveRoot) {
-    for (; up--; up) {
-      parts.unshift('..');
-    }
-  }
-
-  return parts;
-} // path.resolve([from ...], to)
-// posix version
-
-
-exports.resolve = function () {
-  var resolvedPath = '',
-      resolvedAbsolute = false;
-
-  for (var i = arguments.length - 1; i >= -1 && !resolvedAbsolute; i--) {
-    var path = i >= 0 ? arguments[i] : process.cwd(); // Skip empty and invalid entries
-
-    if (typeof path !== 'string') {
-      throw new TypeError('Arguments to path.resolve must be strings');
-    } else if (!path) {
-      continue;
-    }
-
-    resolvedPath = path + '/' + resolvedPath;
-    resolvedAbsolute = path.charAt(0) === '/';
-  } // At this point the path should be resolved to a full absolute path, but
-  // handle relative paths to be safe (might happen when process.cwd() fails)
-  // Normalize the path
-
-
-  resolvedPath = normalizeArray(filter(resolvedPath.split('/'), function (p) {
-    return !!p;
-  }), !resolvedAbsolute).join('/');
-  return (resolvedAbsolute ? '/' : '') + resolvedPath || '.';
-}; // path.normalize(path)
-// posix version
-
-
-exports.normalize = function (path) {
-  var isAbsolute = exports.isAbsolute(path),
-      trailingSlash = substr(path, -1) === '/'; // Normalize the path
-
-  path = normalizeArray(filter(path.split('/'), function (p) {
-    return !!p;
-  }), !isAbsolute).join('/');
-
-  if (!path && !isAbsolute) {
-    path = '.';
-  }
-
-  if (path && trailingSlash) {
-    path += '/';
-  }
-
-  return (isAbsolute ? '/' : '') + path;
-}; // posix version
-
-
-exports.isAbsolute = function (path) {
-  return path.charAt(0) === '/';
-}; // posix version
-
-
-exports.join = function () {
-  var paths = Array.prototype.slice.call(arguments, 0);
-  return exports.normalize(filter(paths, function (p, index) {
-    if (typeof p !== 'string') {
-      throw new TypeError('Arguments to path.join must be strings');
-    }
-
-    return p;
-  }).join('/'));
-}; // path.relative(from, to)
-// posix version
-
-
-exports.relative = function (from, to) {
-  from = exports.resolve(from).substr(1);
-  to = exports.resolve(to).substr(1);
-
-  function trim(arr) {
-    var start = 0;
-
-    for (; start < arr.length; start++) {
-      if (arr[start] !== '') break;
-    }
-
-    var end = arr.length - 1;
-
-    for (; end >= 0; end--) {
-      if (arr[end] !== '') break;
-    }
-
-    if (start > end) return [];
-    return arr.slice(start, end - start + 1);
-  }
-
-  var fromParts = trim(from.split('/'));
-  var toParts = trim(to.split('/'));
-  var length = Math.min(fromParts.length, toParts.length);
-  var samePartsLength = length;
-
-  for (var i = 0; i < length; i++) {
-    if (fromParts[i] !== toParts[i]) {
-      samePartsLength = i;
-      break;
-    }
-  }
-
-  var outputParts = [];
-
-  for (var i = samePartsLength; i < fromParts.length; i++) {
-    outputParts.push('..');
-  }
-
-  outputParts = outputParts.concat(toParts.slice(samePartsLength));
-  return outputParts.join('/');
-};
-
-exports.sep = '/';
-exports.delimiter = ':';
-
-exports.dirname = function (path) {
-  if (typeof path !== 'string') path = path + '';
-  if (path.length === 0) return '.';
-  var code = path.charCodeAt(0);
-  var hasRoot = code === 47
-  /*/*/
-  ;
-  var end = -1;
-  var matchedSlash = true;
-
-  for (var i = path.length - 1; i >= 1; --i) {
-    code = path.charCodeAt(i);
-
-    if (code === 47
-    /*/*/
-    ) {
-        if (!matchedSlash) {
-          end = i;
-          break;
-        }
-      } else {
-      // We saw the first non-path separator
-      matchedSlash = false;
-    }
-  }
-
-  if (end === -1) return hasRoot ? '/' : '.';
-
-  if (hasRoot && end === 1) {
-    // return '//';
-    // Backwards-compat fix:
-    return '/';
-  }
-
-  return path.slice(0, end);
-};
-
-function basename(path) {
-  if (typeof path !== 'string') path = path + '';
-  var start = 0;
-  var end = -1;
-  var matchedSlash = true;
-  var i;
-
-  for (i = path.length - 1; i >= 0; --i) {
-    if (path.charCodeAt(i) === 47
-    /*/*/
-    ) {
-        // If we reached a path separator that was not part of a set of path
-        // separators at the end of the string, stop now
-        if (!matchedSlash) {
-          start = i + 1;
-          break;
-        }
-      } else if (end === -1) {
-      // We saw the first non-path separator, mark this as the end of our
-      // path component
-      matchedSlash = false;
-      end = i + 1;
-    }
-  }
-
-  if (end === -1) return '';
-  return path.slice(start, end);
-} // Uses a mixed approach for backwards-compatibility, as ext behavior changed
-// in new Node.js versions, so only basename() above is backported here
-
-
-exports.basename = function (path, ext) {
-  var f = basename(path);
-
-  if (ext && f.substr(-1 * ext.length) === ext) {
-    f = f.substr(0, f.length - ext.length);
-  }
-
-  return f;
-};
-
-exports.extname = function (path) {
-  if (typeof path !== 'string') path = path + '';
-  var startDot = -1;
-  var startPart = 0;
-  var end = -1;
-  var matchedSlash = true; // Track the state of characters (if any) we see before our first dot and
-  // after any path separator we find
-
-  var preDotState = 0;
-
-  for (var i = path.length - 1; i >= 0; --i) {
-    var code = path.charCodeAt(i);
-
-    if (code === 47
-    /*/*/
-    ) {
-        // If we reached a path separator that was not part of a set of path
-        // separators at the end of the string, stop now
-        if (!matchedSlash) {
-          startPart = i + 1;
-          break;
-        }
-
-        continue;
-      }
-
-    if (end === -1) {
-      // We saw the first non-path separator, mark this as the end of our
-      // extension
-      matchedSlash = false;
-      end = i + 1;
-    }
-
-    if (code === 46
-    /*.*/
-    ) {
-        // If this is our first dot, mark it as the start of our extension
-        if (startDot === -1) startDot = i;else if (preDotState !== 1) preDotState = 1;
-      } else if (startDot !== -1) {
-      // We saw a non-dot and non-path separator before our dot, so we should
-      // have a good chance at having a non-empty extension
-      preDotState = -1;
-    }
-  }
-
-  if (startDot === -1 || end === -1 || // We saw a non-dot character immediately before the dot
-  preDotState === 0 || // The (right-most) trimmed path component is exactly '..'
-  preDotState === 1 && startDot === end - 1 && startDot === startPart + 1) {
-    return '';
-  }
-
-  return path.slice(startDot, end);
-};
-
-function filter(xs, f) {
-  if (xs.filter) return xs.filter(f);
-  var res = [];
-
-  for (var i = 0; i < xs.length; i++) {
-    if (f(xs[i], i, xs)) res.push(xs[i]);
-  }
-
-  return res;
-} // String.prototype.substr - negative index don't work in IE8
-
-
-var substr = 'ab'.substr(-1) === 'b' ? function (str, start, len) {
-  return str.substr(start, len);
-} : function (str, start, len) {
-  if (start < 0) start = str.length + start;
-  return str.substr(start, len);
-};
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../process/browser.js */ "./node_modules/process/browser.js")))
-
-/***/ }),
-
 /***/ "./node_modules/pkcs7/dist/pkcs7.es.js":
 /*!*********************************************!*\
   !*** ./node_modules/pkcs7/dist/pkcs7.es.js ***!
@@ -13923,224 +13781,6 @@ function unpad(padded) {
 
 var version = "1.0.2";
 
-
-/***/ }),
-
-/***/ "./node_modules/process/browser.js":
-/*!*****************************************!*\
-  !*** ./node_modules/process/browser.js ***!
-  \*****************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-// shim for using process in browser
-var process = module.exports = {}; // cached from whatever global is present so that test runners that stub it
-// don't break things.  But we need to wrap it in a try catch in case it is
-// wrapped in strict mode code which doesn't define any globals.  It's inside a
-// function because try/catches deoptimize in certain engines.
-
-var cachedSetTimeout;
-var cachedClearTimeout;
-
-function defaultSetTimout() {
-  throw new Error('setTimeout has not been defined');
-}
-
-function defaultClearTimeout() {
-  throw new Error('clearTimeout has not been defined');
-}
-
-(function () {
-  try {
-    if (typeof setTimeout === 'function') {
-      cachedSetTimeout = setTimeout;
-    } else {
-      cachedSetTimeout = defaultSetTimout;
-    }
-  } catch (e) {
-    cachedSetTimeout = defaultSetTimout;
-  }
-
-  try {
-    if (typeof clearTimeout === 'function') {
-      cachedClearTimeout = clearTimeout;
-    } else {
-      cachedClearTimeout = defaultClearTimeout;
-    }
-  } catch (e) {
-    cachedClearTimeout = defaultClearTimeout;
-  }
-})();
-
-function runTimeout(fun) {
-  if (cachedSetTimeout === setTimeout) {
-    //normal enviroments in sane situations
-    return setTimeout(fun, 0);
-  } // if setTimeout wasn't available but was latter defined
-
-
-  if ((cachedSetTimeout === defaultSetTimout || !cachedSetTimeout) && setTimeout) {
-    cachedSetTimeout = setTimeout;
-    return setTimeout(fun, 0);
-  }
-
-  try {
-    // when when somebody has screwed with setTimeout but no I.E. maddness
-    return cachedSetTimeout(fun, 0);
-  } catch (e) {
-    try {
-      // When we are in I.E. but the script has been evaled so I.E. doesn't trust the global object when called normally
-      return cachedSetTimeout.call(null, fun, 0);
-    } catch (e) {
-      // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error
-      return cachedSetTimeout.call(this, fun, 0);
-    }
-  }
-}
-
-function runClearTimeout(marker) {
-  if (cachedClearTimeout === clearTimeout) {
-    //normal enviroments in sane situations
-    return clearTimeout(marker);
-  } // if clearTimeout wasn't available but was latter defined
-
-
-  if ((cachedClearTimeout === defaultClearTimeout || !cachedClearTimeout) && clearTimeout) {
-    cachedClearTimeout = clearTimeout;
-    return clearTimeout(marker);
-  }
-
-  try {
-    // when when somebody has screwed with setTimeout but no I.E. maddness
-    return cachedClearTimeout(marker);
-  } catch (e) {
-    try {
-      // When we are in I.E. but the script has been evaled so I.E. doesn't  trust the global object when called normally
-      return cachedClearTimeout.call(null, marker);
-    } catch (e) {
-      // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error.
-      // Some versions of I.E. have different rules for clearTimeout vs setTimeout
-      return cachedClearTimeout.call(this, marker);
-    }
-  }
-}
-
-var queue = [];
-var draining = false;
-var currentQueue;
-var queueIndex = -1;
-
-function cleanUpNextTick() {
-  if (!draining || !currentQueue) {
-    return;
-  }
-
-  draining = false;
-
-  if (currentQueue.length) {
-    queue = currentQueue.concat(queue);
-  } else {
-    queueIndex = -1;
-  }
-
-  if (queue.length) {
-    drainQueue();
-  }
-}
-
-function drainQueue() {
-  if (draining) {
-    return;
-  }
-
-  var timeout = runTimeout(cleanUpNextTick);
-  draining = true;
-  var len = queue.length;
-
-  while (len) {
-    currentQueue = queue;
-    queue = [];
-
-    while (++queueIndex < len) {
-      if (currentQueue) {
-        currentQueue[queueIndex].run();
-      }
-    }
-
-    queueIndex = -1;
-    len = queue.length;
-  }
-
-  currentQueue = null;
-  draining = false;
-  runClearTimeout(timeout);
-}
-
-process.nextTick = function (fun) {
-  var args = new Array(arguments.length - 1);
-
-  if (arguments.length > 1) {
-    for (var i = 1; i < arguments.length; i++) {
-      args[i - 1] = arguments[i];
-    }
-  }
-
-  queue.push(new Item(fun, args));
-
-  if (queue.length === 1 && !draining) {
-    runTimeout(drainQueue);
-  }
-}; // v8 likes predictible objects
-
-
-function Item(fun, array) {
-  this.fun = fun;
-  this.array = array;
-}
-
-Item.prototype.run = function () {
-  this.fun.apply(null, this.array);
-};
-
-process.title = 'browser';
-process.browser = true;
-process.env = {};
-process.argv = [];
-process.version = ''; // empty string to avoid regexp issues
-
-process.versions = {};
-
-function noop() {}
-
-process.on = noop;
-process.addListener = noop;
-process.once = noop;
-process.off = noop;
-process.removeListener = noop;
-process.removeAllListeners = noop;
-process.emit = noop;
-process.prependListener = noop;
-process.prependOnceListener = noop;
-
-process.listeners = function (name) {
-  return [];
-};
-
-process.binding = function (name) {
-  throw new Error('process.binding is not supported');
-};
-
-process.cwd = function () {
-  return '/';
-};
-
-process.chdir = function (dir) {
-  throw new Error('process.chdir is not supported');
-};
-
-process.umask = function () {
-  return 0;
-};
 
 /***/ }),
 
@@ -39791,110 +39431,6 @@ function extend() {
 
   return target;
 }
-
-/***/ }),
-
-/***/ "./src/clientSide/isVideo.js":
-/*!***********************************!*\
-  !*** ./src/clientSide/isVideo.js ***!
-  \***********************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var path = __webpack_require__(/*! path */ "./node_modules/path-browserify/index.js");
-
-var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-
-var _require = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js"),
-    render = _require.render;
-
-var videojs = __webpack_require__(/*! video.js */ "./node_modules/video.js/dist/video.es.js");
-
-module.exports = function (pathName, fileName) {
-  var splitSlash = 'files/' + pathName.substring(12);
-  var extAll = fileName.split('.');
-  var ext = extAll[extAll.length - 1];
-  console.log('extAll: ', extAll, '\r\next: ', ext);
-
-  switch (ext) {
-    case 'mp4':
-      return React.createElement("div", {
-        className: "poop"
-      }, React.createElement("video", {
-        controls: true,
-        src: splitSlash,
-        type: "video/mp4",
-        width: "400",
-        height: "300"
-      }, "I'm sorry; your browser doesn't support HTML5 video in MP4 with H.264."), React.createElement("p", {
-        className: "naming"
-      }, fileName));
-      break;
-
-    case 'webm':
-      return React.createElement("div", {
-        className: "poop"
-      }, React.createElement("video", {
-        controls: true,
-        src: splitSlash,
-        type: "video/webm",
-        width: "400",
-        height: "300"
-      }, "I'm sorry; your browser doesn't support HTML5 video in WebM with VP8/VP9."), React.createElement("p", {
-        className: "naming"
-      }, fileName));
-      break;
-
-    case 'mkv':
-      return React.createElement("div", {
-        className: "poop"
-      }, React.createElement("video", {
-        controls: true,
-        src: splitSlash,
-        type: "video/x-matroska, audio/x-matroska",
-        width: "400",
-        height: "300"
-      }, "I'm sorry; your browser doesn't support HTML5 video in WebM with VP8/VP9."), React.createElement("p", {
-        className: "naming"
-      }, fileName));
-      break;
-
-    default:
-      return React.createElement("a", {
-        href: splitSlash
-      }, fileName);
-  }
-};
-
-/***/ }),
-
-/***/ "./src/clientSide/mysite.sass":
-/*!************************************!*\
-  !*** ./src/clientSide/mysite.sass ***!
-  \************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-
-var content = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js!../../node_modules/sass-loader/lib/loader.js!./mysite.sass */ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/lib/loader.js!./src/clientSide/mysite.sass");
-
-if(typeof content === 'string') content = [[module.i, content, '']];
-
-var transform;
-var insertInto;
-
-
-
-var options = {"hmr":true}
-
-options.transform = transform
-options.insertInto = undefined;
-
-var update = __webpack_require__(/*! ../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
-
-if(content.locals) module.exports = content.locals;
-
-if(false) {}
 
 /***/ }),
 

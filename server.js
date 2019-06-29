@@ -1,10 +1,10 @@
 const express = require('express');
 const app = express();
 const path = require('path');
-const createInitJSON = require('./new/createInitJSON.js');
+const createInitJSON = require('./new/serverSide/createInitJSON.js');
 
-const httpHere = path.join(__dirname, 'dist');
-const ftpHere = path.join(__dirname, '..', '..', '..', 'FTPvideo');
+const ftpHere = require('./CONSTANTS').storage;
+const httpHere = require('./CONSTANTS').singleWebpackEntryPointDir;
 
 createInitJSON(ftpHere);
 

@@ -5,32 +5,6 @@
     <title>Webpack App</title>
   </head>
   <body>
-    hellow user
     <div id="root"></div>
-    <button class="newButton" onclick="goFunc()"></button>
-
-    <script>
-      function goFunc() {
-        let i = 0;
-        const but = document.getElementsByClassName("newButton")[0];
-        but.innerHTML = i;
-        const f = () => {
-          i = i + 1;
-          but.innerHTML = i;
-        };
-        const timerID = setInterval(f, 1000);
-
-        fetch("http://localhost:3000/checkfronthash", {
-          method: "POST",
-          headers: {
-            Accept: "text/plain",
-            "Content-Type": "plain/text;charset=utf-8"
-          },
-          body: "YOLO"
-        })
-          .then(elem => elem.text())
-          .then(data => alert(data));
-      }
-    </script>
   <script type="text/javascript" src="/indexReactJS.js"></script></body>
 </html>

@@ -1,7 +1,6 @@
 node_modules
 
-dist/testR.js
-dist/testR.js.map
+dist/indexReactJS.js
+dist/indexReactJS.js.map
 
-src/clientSide/files.json
-src/serverSide/__JSON_SHA1__.json
+new/clientSide/ftpFiles.json
