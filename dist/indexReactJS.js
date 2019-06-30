@@ -94,7 +94,7 @@ var indexReactJS =
 /*! exports provided: /, default */
 /***/ (function(module) {
 
-module.exports = {"/":{"files":[{"rootPath":"X:/FTPvideo","relativeFilePath":"123.txt","fileName":"123","ext":".txt"}],"folders":{"X:\\FTPvideo\\Год культуры":{"files":[{"rootPath":"X:/FTPvideo","relativeFilePath":"Год культуры/God.Kultury.E20.mp4","fileName":"God.Kultury.E20","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Год культуры/God.Kultury.E19.mp4","fileName":"God.Kultury.E19","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Год культуры/God.Kultury.E18.mp4","fileName":"God.Kultury.E18","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Год культуры/God.Kultury.E17.mp4","fileName":"God.Kultury.E17","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Год культуры/God.Kultury.E16.mp4","fileName":"God.Kultury.E16","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Год культуры/God.Kultury.E15.mp4","fileName":"God.Kultury.E15","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Год культуры/God.Kultury.E14.mp4","fileName":"God.Kultury.E14","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Год культуры/God.Kultury.E13.mp4","fileName":"God.Kultury.E13","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Год культуры/God.Kultury.E12.mp4","fileName":"God.Kultury.E12","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Год культуры/God.Kultury.E11.mp4","fileName":"God.Kultury.E11","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Год культуры/God.Kultury.E10.mp4","fileName":"God.Kultury.E10","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Год культуры/God.Kultury.E09.mp4","fileName":"God.Kultury.E09","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Год культуры/God.Kultury.E08.mp4","fileName":"God.Kultury.E08","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Год культуры/God.Kultury.E07.mp4","fileName":"God.Kultury.E07","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Год культуры/God.Kultury.E06.mp4","fileName":"God.Kultury.E06","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Год культуры/God.Kultury.E05.mp4","fileName":"God.Kultury.E05","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Год культуры/God.Kultury.E04.mp4","fileName":"God.Kultury.E04","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Год культуры/God.Kultury.E03.mp4","fileName":"God.Kultury.E03","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Год культуры/God.Kultury.E02.mp4","fileName":"God.Kultury.E02","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Год культуры/God.Kultury.E01.mp4","fileName":"God.Kultury.E01","ext":".mp4"}],"folders":{"X:\\FTPvideo\\Год культуры\\Новая папка":{"files":[],"folders":{"X:\\FTPvideo\\Год культуры\\Новая папка\\Новая папка":{"files":[],"folders":{},"relativePath":"Год культуры/Новая папка/Новая папка"}},"relativePath":"Год культуры/Новая папка"}},"relativePath":"Год культуры"},"X:\\FTPvideo\\Rick and Morty":{"files":[],"folders":{"X:\\FTPvideo\\Rick and Morty\\3 season":{"files":[{"rootPath":"X:/FTPvideo","relativeFilePath":"Rick and Morty/3 season/10 - Рикчжурский Мортидат.mp4","fileName":"10 - Рикчжурский Мортидат","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Rick and Morty/3 season/09 - Азбука Бет.mp4","fileName":"09 - Азбука Бет","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Rick and Morty/3 season/08 - Проветренный мозг Морти.mp4","fileName":"08 - Проветренный мозг Морти","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Rick and Morty/3 season/07 - Риклантидическая путаница.mp4","fileName":"07 - Риклантидическая путаница","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Rick and Morty/3 season/06 - Отдых и Риклаксация.mp4","fileName":"06 - Отдых и Риклаксация","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Rick and Morty/3 season/05 - Ветреной Заговор Дёрли.mp4","fileName":"05 - Ветреной Заговор Дёрли","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Rick and Morty/3 season/04 - Поборники 3. Возвращение в Подземелье.mp4","fileName":"04 - Поборники 3. Возвращение в Подземелье","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Rick and Morty/3 season/03 - Маринованный Рик.mp4","fileName":"03 - Маринованный Рик","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Rick and Morty/3 season/02 - Рикман с камнем.mp4","fileName":"02 - Рикман с камнем","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Rick and Morty/3 season/01 - Побег из Рикшенка.mp4","fileName":"01 - Побег из Рикшенка","ext":".mp4"}],"folders":{},"relativePath":"Rick and Morty/3 season"},"X:\\FTPvideo\\Rick and Morty\\2 season":{"files":[{"rootPath":"X:/FTPvideo","relativeFilePath":"Rick and Morty/2 season/10 - Свадебные Сквончеры.mp4","fileName":"10 - Свадебные Сквончеры","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Rick and Morty/2 season/09 - Судная Ночь.mp4","fileName":"09 - Судная Ночь","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Rick and Morty/2 season/08 - Межвселенский Кабель 2. Искушение Судьбы.mp4","fileName":"08 - Межвселенский Кабель 2. Искушение Судьбы","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Rick and Morty/2 season/07 - Большой переполох в маленьком Санчезе.mp4","fileName":"07 - Большой переполох в маленьком Санчезе","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Rick and Morty/2 season/06 - Наверное, Рики сошли с ума.mp4","fileName":"06 - Наверное, Рики сошли с ума","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Rick and Morty/2 season/05 - Пора Швифтануться.mp4","fileName":"05 - Пора Швифтануться","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Rick and Morty/2 season/04 - Вспомнить Вэ Сэ Йо.mp4","fileName":"04 - Вспомнить Вэ Сэ Йо","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Rick and Morty/2 season/03 - Аутоэротическая ассимиляция.mp4","fileName":"03 - Аутоэротическая ассимиляция","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Rick and Morty/2 season/02 - Успеть до Морти-ночи.mp4","fileName":"02 - Успеть до Морти-ночи","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Rick and Morty/2 season/01 - Рик во времени.mp4","fileName":"01 - Рик во времени","ext":".mp4"}],"folders":{},"relativePath":"Rick and Morty/2 season"},"X:\\FTPvideo\\Rick and Morty\\1 season":{"files":[{"rootPath":"X:/FTPvideo","relativeFilePath":"Rick and Morty/1 season/11 - Риксованный бизнес.mp4","fileName":"11 - Риксованный бизнес","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Rick and Morty/1 season/10 - Близкие риконтакты риковой степени.mp4","fileName":"10 - Близкие риконтакты риковой степени","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Rick and Morty/1 season/09 - Надвигается нечто риканутое.mp4","fileName":"09 - Надвигается нечто риканутое","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Rick and Morty/1 season/08 - Скандалы, Рик и расследования.mp4","fileName":"08 - Скандалы, Рик и расследования","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Rick and Morty/1 season/07 - Воспитание Газорпазорпа.mp4","fileName":"07 - Воспитание Газорпазорпа","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Rick and Morty/1 season/06 - Напиток Рика №9.mp4","fileName":"06 - Напиток Рика №9","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Rick and Morty/1 season/05 - Мисикс и разрушение.mp4","fileName":"05 - Мисикс и разрушение","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Rick and Morty/1 season/04 - М. Найт Шьямал-Инопланетяне!.mp4","fileName":"04 - М. Найт Шьямал-Инопланетяне!","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Rick and Morty/1 season/03 - Анатомический парк.mp4","fileName":"03 - Анатомический парк","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Rick and Morty/1 season/02 - Пёс-газонокосильщик.mp4","fileName":"02 - Пёс-газонокосильщик","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Rick and Morty/1 season/01 - Пилотный эпизод.mp4","fileName":"01 - Пилотный эпизод","ext":".mp4"}],"folders":{},"relativePath":"Rick and Morty/1 season"}},"relativePath":"Rick and Morty"}}}};
+module.exports = {"/":{"files":[{"rootPath":"X:/FTPvideo","relativeFilePath":"123.txt","fileName":"123","ext":".txt"}],"folders":{"X:\\FTPvideo\\Год культуры":{"files":[{"rootPath":"X:/FTPvideo","relativeFilePath":"Год культуры/20.mp4","fileName":"20","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Год культуры/19.mp4","fileName":"19","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Год культуры/18.mp4","fileName":"18","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Год культуры/17.mp4","fileName":"17","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Год культуры/16.mp4","fileName":"16","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Год культуры/15.mp4","fileName":"15","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Год культуры/14.mp4","fileName":"14","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Год культуры/13.mp4","fileName":"13","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Год культуры/12.mp4","fileName":"12","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Год культуры/11.mp4","fileName":"11","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Год культуры/10.mp4","fileName":"10","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Год культуры/09.mp4","fileName":"09","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Год культуры/08.mp4","fileName":"08","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Год культуры/07.mp4","fileName":"07","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Год культуры/06.mp4","fileName":"06","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Год культуры/05.mp4","fileName":"05","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Год культуры/04.mp4","fileName":"04","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Год культуры/03.mp4","fileName":"03","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Год культуры/02.mp4","fileName":"02","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Год культуры/01.mp4","fileName":"01","ext":".mp4"}],"folders":{"X:\\FTPvideo\\Год культуры\\Новая папка":{"files":[],"folders":{"X:\\FTPvideo\\Год культуры\\Новая папка\\Новая папка":{"files":[],"folders":{},"folderName":"Новая папка"}},"folderName":"Новая папка"}},"folderName":"Год культуры"},"X:\\FTPvideo\\Rick and Morty":{"files":[],"folders":{"X:\\FTPvideo\\Rick and Morty\\3 season":{"files":[{"rootPath":"X:/FTPvideo","relativeFilePath":"Rick and Morty/3 season/10 - Рикчжурский Мортидат.mp4","fileName":"10 - Рикчжурский Мортидат","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Rick and Morty/3 season/09 - Азбука Бет.mp4","fileName":"09 - Азбука Бет","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Rick and Morty/3 season/08 - Проветренный мозг Морти.mp4","fileName":"08 - Проветренный мозг Морти","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Rick and Morty/3 season/07 - Риклантидическая путаница.mp4","fileName":"07 - Риклантидическая путаница","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Rick and Morty/3 season/06 - Отдых и Риклаксация.mp4","fileName":"06 - Отдых и Риклаксация","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Rick and Morty/3 season/05 - Ветреной Заговор Дёрли.mp4","fileName":"05 - Ветреной Заговор Дёрли","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Rick and Morty/3 season/04 - Поборники 3. Возвращение в Подземелье.mp4","fileName":"04 - Поборники 3. Возвращение в Подземелье","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Rick and Morty/3 season/03 - Маринованный Рик.mp4","fileName":"03 - Маринованный Рик","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Rick and Morty/3 season/02 - Рикман с камнем.mp4","fileName":"02 - Рикман с камнем","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Rick and Morty/3 season/01 - Побег из Рикшенка.mp4","fileName":"01 - Побег из Рикшенка","ext":".mp4"}],"folders":{},"folderName":"3 season"},"X:\\FTPvideo\\Rick and Morty\\2 season":{"files":[{"rootPath":"X:/FTPvideo","relativeFilePath":"Rick and Morty/2 season/10 - Свадебные Сквончеры.mp4","fileName":"10 - Свадебные Сквончеры","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Rick and Morty/2 season/09 - Судная Ночь.mp4","fileName":"09 - Судная Ночь","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Rick and Morty/2 season/08 - Межвселенский Кабель 2. Искушение Судьбы.mp4","fileName":"08 - Межвселенский Кабель 2. Искушение Судьбы","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Rick and Morty/2 season/07 - Большой переполох в маленьком Санчезе.mp4","fileName":"07 - Большой переполох в маленьком Санчезе","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Rick and Morty/2 season/06 - Наверное, Рики сошли с ума.mp4","fileName":"06 - Наверное, Рики сошли с ума","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Rick and Morty/2 season/05 - Пора Швифтануться.mp4","fileName":"05 - Пора Швифтануться","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Rick and Morty/2 season/04 - Вспомнить Вэ Сэ Йо.mp4","fileName":"04 - Вспомнить Вэ Сэ Йо","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Rick and Morty/2 season/03 - Аутоэротическая ассимиляция.mp4","fileName":"03 - Аутоэротическая ассимиляция","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Rick and Morty/2 season/02 - Успеть до Морти-ночи.mp4","fileName":"02 - Успеть до Морти-ночи","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Rick and Morty/2 season/01 - Рик во времени.mp4","fileName":"01 - Рик во времени","ext":".mp4"}],"folders":{},"folderName":"2 season"},"X:\\FTPvideo\\Rick and Morty\\1 season":{"files":[{"rootPath":"X:/FTPvideo","relativeFilePath":"Rick and Morty/1 season/11 - Риксованный бизнес.mp4","fileName":"11 - Риксованный бизнес","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Rick and Morty/1 season/10 - Близкие риконтакты риковой степени.mp4","fileName":"10 - Близкие риконтакты риковой степени","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Rick and Morty/1 season/09 - Надвигается нечто риканутое.mp4","fileName":"09 - Надвигается нечто риканутое","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Rick and Morty/1 season/08 - Скандалы, Рик и расследования.mp4","fileName":"08 - Скандалы, Рик и расследования","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Rick and Morty/1 season/07 - Воспитание Газорпазорпа.mp4","fileName":"07 - Воспитание Газорпазорпа","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Rick and Morty/1 season/06 - Напиток Рика №9.mp4","fileName":"06 - Напиток Рика №9","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Rick and Morty/1 season/05 - Мисикс и разрушение.mp4","fileName":"05 - Мисикс и разрушение","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Rick and Morty/1 season/04 - М. Найт Шьямал-Инопланетяне!.mp4","fileName":"04 - М. Найт Шьямал-Инопланетяне!","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Rick and Morty/1 season/03 - Анатомический парк.mp4","fileName":"03 - Анатомический парк","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Rick and Morty/1 season/02 - Пёс-газонокосильщик.mp4","fileName":"02 - Пёс-газонокосильщик","ext":".mp4"},{"rootPath":"X:/FTPvideo","relativeFilePath":"Rick and Morty/1 season/01 - Пилотный эпизод.mp4","fileName":"01 - Пилотный эпизод","ext":".mp4"}],"folders":{},"folderName":"1 season"}},"folderName":"Rick and Morty"}}}};
 
 /***/ }),
 
@@ -115,38 +115,46 @@ module.exports = function (pathName) {
   var ext = pathName.ext;
 
   switch (ext) {
-    case '.mp4':
-      return React.createElement("div", {
-        className: "poop"
-      }, React.createElement("video", {
-        controls: true,
-        src: splitSlash,
-        type: "video/mp4",
-        width: "400",
-        height: "300"
-      }, "I'm sorry; your browser doesn't support HTML5 video in MP4 with H.264."), React.createElement("p", {
-        className: "naming"
-      }, fileName));
-      break;
-
-    case '.webm':
-      return React.createElement("div", {
-        className: "poop"
-      }, React.createElement("video", {
-        controls: true,
-        src: splitSlash,
-        type: "video/webm",
-        width: "400",
-        height: "300"
-      }, "I'm sorry; your browser doesn't support HTML5 video in WebM with VP8/VP9."), React.createElement("p", {
-        className: "naming"
-      }, fileName));
-      break;
-
+    // case '.mp4':
+    //   return (
+    //     <div className="poop">
+    //       <video
+    //         controls
+    //         src={splitSlash}
+    //         type="video/mp4"
+    //         width="400"
+    //         height="225"
+    //       >
+    //         I'm sorry; your browser doesn't support HTML5 video in MP4 with
+    //         H.264.
+    //       </video>
+    //       <p className="naming">{fileName}</p>
+    //     </div>
+    //   );
+    //   break;
+    // case '.webm':
+    //   return (
+    //     <div className="poop">
+    //       <video
+    //         controls
+    //         src={splitSlash}
+    //         type="video/webm"
+    //         width="400"
+    //         height="300"
+    //       >
+    //         I'm sorry; your browser doesn't support HTML5 video in WebM with
+    //         VP8/VP9.
+    //       </video>
+    //       <p className="naming">{fileName}</p>
+    //     </div>
+    //   );
+    //   break;
     default:
-      return React.createElement("a", {
+      return React.createElement("div", {
+        className: "comfortaa"
+      }, React.createElement("a", {
         href: splitSlash
-      }, fileName);
+      }, fileName));
   }
 };
 
@@ -202,11 +210,11 @@ function FTPfiles(props) {
   }
 
   if (Object.keys(startDir.folders).length > 0) {
-    Object.keys(startDir.folders).forEach(function (elem) {
+    Object.keys(startDir.folders).sort().forEach(function (elem) {
       result.push(React.createElement(FileDir, {
         elemValue: startDir.folders[elem],
         key: id,
-        elemName: startDir.folders[elem].relativePath
+        elemName: startDir.folders[elem].folderName
       }));
       id = id + 1;
     });
@@ -221,13 +229,14 @@ function FTPfiles(props) {
 
 function FileElement(props) {
   var files = props.files;
-  return files.map(function (elem, id) {
-    var fileName = elem.fileName;
+  files.sort(sortFunc);
+  var resultArr = files.map(function (elem, id) {
     return React.createElement("div", {
       key: id,
       className: "file"
     }, isVideo(elem));
   });
+  return resultArr;
 }
 
 var FileDir =
@@ -262,20 +271,11 @@ function (_React$Component) {
       var _this2 = this;
 
       return React.createElement("div", null, React.createElement("div", {
-        className: "directory"
-      }, this.state.filesButton ? React.createElement("span", {
+        className: "directory comfortaa",
         onClick: function onClick() {
           return _this2.handlerButtonValue();
         }
-      }, "\u25BA") : React.createElement("span", {
-        onClick: function onClick() {
-          return _this2.handlerButtonValue();
-        }
-      }, "\u25BC"), React.createElement("span", {
-        onClick: function onClick() {
-          return _this2.handlerButtonValue();
-        }
-      }, this.elemName)), React.createElement("div", null, React.createElement(FilesFromButton, {
+      }, this.state.filesButton ? React.createElement("span", null, "\u25BA") : React.createElement("span", null, "\u25BC"), React.createElement("span", null, this.elemName)), React.createElement("div", null, React.createElement(FilesFromButton, {
         filesButton: this.state.filesButton,
         dirObj: this.elemValue
       })));
@@ -297,6 +297,10 @@ function FilesFromButton(props) {
     startDir: props.dirObj
   }));
 }
+
+var sortFunc = function sortFunc(a, b) {
+  return a.fileName.split(' ')[0] - b.fileName.split(' ')[0];
+};
 
 render(React.createElement(FTPfiles, {
   startDir: ftpFiles
@@ -969,7 +973,7 @@ var Decrypter = function () {
 
 exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
 // Module
-exports.push([module.i, "@font-face {\n  font-family: \"Comfortaa\";\n  src: url(\"/fonts/Comfortaa.ttf\") format(\"TrueType\"); }\n\n.child {\n  margin: 10px 0 15px 15px;\n  border-left: 5px solid rgba(41, 209, 203, 0.56);\n  padding-left: 10px; }\n\n.directory {\n  margin: 5px 0;\n  text-align: center;\n  vertical-align: middle;\n  align-items: center;\n  display: flex;\n  border-bottom: 1px solid black; }\n  .directory span, .directory div {\n    margin-right: 6px; }\n    .directory span:hover, .directory div:hover {\n      cursor: pointer; }\n\n.dirStr {\n  padding-left: 4px; }\n\n.file {\n  margin: 5px 0; }\n\n.newButton {\n  width: 40px;\n  height: 20px;\n  background-color: red; }\n\n.poop {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n  width: 900px;\n  border: 2px solid red; }\n\n.naming {\n  margin: 0;\n  padding: 0;\n  font-size: 300%;\n  font-family: Comfortaa; }\n", ""]);
+exports.push([module.i, "@font-face {\n  font-family: \"Comfortaa\";\n  src: url(\"/fonts/Comfortaa.ttf\") format(\"TrueType\"); }\n\n.child {\n  margin: 10px 0 15px 15px;\n  border-left: 5px solid rgba(41, 209, 203, 0.56);\n  padding-left: 10px; }\n\n.directory {\n  margin: 5px 0;\n  text-align: center;\n  vertical-align: middle;\n  align-items: center;\n  display: flex;\n  border-bottom: 1px solid black; }\n  .directory:hover {\n    cursor: pointer; }\n  .directory span, .directory div {\n    margin-right: 6px; }\n\n.dirStr {\n  padding-left: 4px; }\n\n.file {\n  margin: 5px 0; }\n\n.newButton {\n  width: 40px;\n  height: 20px;\n  background-color: red; }\n\n.poop {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n  width: 900px;\n  border: 2px solid red; }\n\n.naming {\n  margin: 0;\n  padding: 0;\n  font-size: 200%;\n  font-family: Comfortaa; }\n\n.comfortaa {\n  font-family: Comfortaa;\n  font-size: 150%;\n  margin: 25px 0 0 0; }\n", ""]);
 
 
 

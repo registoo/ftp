@@ -22,7 +22,7 @@ async function f(filePath, foldersObj) {
       }
       const arrayOfFileData = getResultArrayOfFileData(filePath, i);
       const currentFilePath = arrayOfFileData.fullFilePath;
-      const relativeFilePath = arrayOfFileData.relativeFilePath;
+      const fileName = arrayOfFileData.fileName;
       //проверка файл == файл?
       if (await isFile(currentFilePath)) {
         foldersObj.files.push(arrayOfFileData);
@@ -41,7 +41,7 @@ async function f(filePath, foldersObj) {
         foldersObj.folders[currentFilePath] = {
           files: [],
           folders: {},
-          relativePath: relativeFilePath,
+          folderName: fileName,
         };
         f(currentFilePath, foldersObj.folders[currentFilePath]);
       }
@@ -61,7 +61,7 @@ async function main(filePath) {
       await async function(i) {
         const arrayOfFileData = getResultArrayOfFileData(filePath, i);
         const currentFilePath = arrayOfFileData.fullFilePath;
-        const relativeFilePath = arrayOfFileData.relativeFilePath;
+        const fileName = arrayOfFileData.fileName;
         if (await isFile(currentFilePath)) {
           filesJSON['/'].files.push(arrayOfFileData);
           delete arrayOfFileData.fullFilePath;
@@ -79,7 +79,7 @@ async function main(filePath) {
           filesJSON['/'].folders[currentFilePath] = {
             files: [],
             folders: {},
-            relativePath: relativeFilePath,
+            folderName: fileName,
           };
           await f(currentFilePath, filesJSON['/'].folders[currentFilePath]);
         }

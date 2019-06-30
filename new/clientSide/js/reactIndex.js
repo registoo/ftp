@@ -14,16 +14,18 @@ function FTPfiles(props) {
     id = id + 1;
   }
   if (Object.keys(startDir.folders).length > 0) {
-    Object.keys(startDir.folders).forEach(elem => {
-      result.push(
-        <FileDir
-          elemValue={startDir.folders[elem]}
-          key={id}
-          elemName={startDir.folders[elem].relativePath}
-        />
-      );
-      id = id + 1;
-    });
+    Object.keys(startDir.folders)
+      .sort()
+      .forEach(elem => {
+        result.push(
+          <FileDir
+            elemValue={startDir.folders[elem]}
+            key={id}
+            elemName={startDir.folders[elem].folderName}
+          />
+        );
+        id = id + 1;
+      });
   }
   if (!result.length) {
     return <div>Пустая папка</div>;
@@ -33,14 +35,15 @@ function FTPfiles(props) {
 
 function FileElement(props) {
   const files = props.files;
-  return files.map((elem, id) => {
-    const fileName = elem.fileName;
+  files.sort(sortFunc);
+  const resultArr = files.map((elem, id) => {
     return (
       <div key={id} className="file">
         {isVideo(elem)}
       </div>
     );
   });
+  return resultArr;
 }
 
 class FileDir extends React.Component {
@@ -58,13 +61,12 @@ class FileDir extends React.Component {
   render() {
     return (
       <div>
-        <div className="directory">
-          {this.state.filesButton ? (
-            <span onClick={() => this.handlerButtonValue()}>&#9658;</span>
-          ) : (
-            <span onClick={() => this.handlerButtonValue()}>&#9660;</span>
-          )}
-          <span onClick={() => this.handlerButtonValue()}>{this.elemName}</span>
+        <div
+          className="directory comfortaa"
+          onClick={() => this.handlerButtonValue()}
+        >
+          {this.state.filesButton ? <span>&#9658;</span> : <span>&#9660;</span>}
+          <span>{this.elemName}</span>
         </div>
         <div>
           <FilesFromButton
@@ -88,5 +90,7 @@ function FilesFromButton(props) {
     </div>
   );
 }
+
+const sortFunc = (a, b) => a.fileName.split(' ')[0] - b.fileName.split(' ')[0];
 
 render(<FTPfiles startDir={ftpFiles} />, document.getElementById('root'));
