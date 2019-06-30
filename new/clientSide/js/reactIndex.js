@@ -1,8 +1,7 @@
 const React = require('react');
 const { render } = require('react-dom');
-
-require('../mysite.sass');
-const isVideo = require('./isVideo');
+require('../html,css/cssReset.css');
+require('../html,css/mysite.sass');
 const ftpFiles = require('../ftpFiles.json')['/'];
 
 function FTPfiles(props) {
@@ -37,9 +36,12 @@ function FileElement(props) {
   const files = props.files;
   files.sort(sortFunc);
   const resultArr = files.map((elem, id) => {
+    const fileName = elem.fileName;
+    const splitSlash = 'files/' + elem.relativeFilePath;
     return (
-      <div key={id} className="file">
-        {isVideo(elem)}
+      //название файлов
+      <div key={id} className="file comfortaa">
+        <a href={splitSlash}>{fileName}</a>
       </div>
     );
   });
@@ -65,7 +67,11 @@ class FileDir extends React.Component {
           className="directory comfortaa"
           onClick={() => this.handlerButtonValue()}
         >
-          {this.state.filesButton ? <span>&#9658;</span> : <span>&#9660;</span>}
+          {this.state.filesButton ? (
+            <span>&#9658;</span>
+          ) : (
+            <span className="waterColor">&#9660;</span>
+          )}
           <span>{this.elemName}</span>
         </div>
         <div>

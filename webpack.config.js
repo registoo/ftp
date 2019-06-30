@@ -27,7 +27,7 @@ module.exports = (env, options) => {
     },
     plugins: [
       new HtmlWebpackPlugin({
-        template: './new/clientSide/index.html',
+        template: './new/clientSide/html,css/index.html',
       }),
     ],
     module: {
@@ -46,6 +46,10 @@ module.exports = (env, options) => {
         {
           test: /\.sass$/,
           use: ['style-loader', 'css-loader', 'sass-loader'],
+        },
+        {
+          test: /\.css$/,
+          use: ['style-loader', 'css-loader'],
         },
       ],
     },
