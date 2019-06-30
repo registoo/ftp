@@ -1,6 +1,8 @@
 node_modules
-
 dist/indexReactJS.js
 dist/indexReactJS.js.map
-
 new/clientSide/ftpFiles.json
+dist\indexReactJS.js.map
+dist\indexReactJS.js
+dist/indexReactJS.js.map
+dist/indexReactJS.js

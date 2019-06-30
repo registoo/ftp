@@ -1,6 +1,6 @@
 const path = require('path');
 
-const storage = path.join('X:/FTPvideo');
+const storage = path.join('D:', 'FTPvideo');
 const singleEntryPoint = 'indexReactJS';
 
 const singleEntryPointDir = path.join(__dirname, 'dist');
